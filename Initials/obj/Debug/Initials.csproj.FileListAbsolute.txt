@@ -1,0 +1,7 @@
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\bin\Initials.dll
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\bin\Initials.pdb
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Initials\obj\Debug\Initials.csproj.AssemblyReference.cache
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Initials\obj\Debug\Initials.csproj.CoreCompileInputs.cache
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Initials\obj\Debug\Initials.csproj.CopyComplete
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Initials\obj\Debug\Initials.dll
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Initials\obj\Debug\Initials.pdb

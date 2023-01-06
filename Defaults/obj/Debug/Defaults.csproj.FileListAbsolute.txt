@@ -1,0 +1,7 @@
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\bin\Defaults.dll.config
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\bin\Defaults.dll
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\bin\Defaults.pdb
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Defaults\obj\Debug\Defaults.csproj.AssemblyReference.cache
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Defaults\obj\Debug\Defaults.csproj.CoreCompileInputs.cache
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Defaults\obj\Debug\Defaults.dll
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Defaults\obj\Debug\Defaults.pdb

@@ -1,0 +1,17 @@
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\Client.exe.config
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\Client.exe
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\Client.pdb
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.exe
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.pdb
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.DashBoard.resources
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.LogIn.resources
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.csproj.Fody.CopyLocal.cache
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.Morning_Panel.resources
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.Gear.resources
