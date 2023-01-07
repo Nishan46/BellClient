@@ -49,16 +49,16 @@ namespace Client
         {
             if (checkRegs.Checked)
             {
-                Core.registryKey.SetValue("MRC Bell System V", Application.ExecutablePath);
+                Core.registryKey.SetValue("MRCBellSystemV", $"{'"'}{Application.ExecutablePath}{'"'}");
             }
             else
             {
-                Core.registryKey.DeleteValue("MRC Bell System V", false);
+                Core.registryKey.DeleteValue("MRCBellSystemV", false);
             }
         }
         private void CheckStartupValues()
         {
-            if (Core.registryKey.GetValue("MRC Bell System V") == null)
+            if (Core.registryKey.GetValue("MRCBellSystemV") == null)
             {
                 checkRegs.Checked = false;
             }

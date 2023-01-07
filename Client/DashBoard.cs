@@ -24,14 +24,10 @@ namespace Client
                         lblheader.ForeColor = Color.Red;
                         lblheader.Text = "Preparing to Shutdown ...";
                         Thread.Sleep(1000);
-                        for (int i = 59; i > 0; i--)
+                        for (int i = 59; i >=0; i--)
                         {
                             if (i <= 5)
                             {
-                                var psi = new ProcessStartInfo("shutdown", "/s /t 5");
-                                psi.CreateNoWindow = true;
-                                psi.UseShellExecute = false;
-                                Process.Start(psi);
                                 lblheader.Text = $"Shutdown in {i}s";
                             }
                             else
@@ -48,8 +44,17 @@ namespace Client
                                     break;
                                 }
                             }
-                            if (i == 2)
+                            if (i == 0)
                             {
+                                Thread.Sleep(1000);
+                                lblheader.ForeColor = Color.FromArgb(30, 136, 229);
+                                lblheader.Text = "See you !";
+                                Thread.Sleep(1000);
+                                var psi = new ProcessStartInfo("shutdown", "/s /t 1");
+                                psi.CreateNoWindow = true;
+                                psi.UseShellExecute = false;
+                                Thread.Sleep(1000);
+                                Process.Start(psi);
                                 Process.GetCurrentProcess().Kill();
                             }
                             Thread.Sleep(1000);
