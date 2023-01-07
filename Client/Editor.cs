@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Client.Controls
+namespace Client
 {
-    public partial class Container : UserControl
+    public partial class Editor : Form
     {
-        public Container()
+        public Editor()
         {
             InitializeComponent();
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

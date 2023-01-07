@@ -76,7 +76,7 @@
             this.pnlHeader.ForeColor = System.Drawing.Color.Transparent;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(813, 49);
+            this.pnlHeader.Size = new System.Drawing.Size(1008, 49);
             this.pnlHeader.TabIndex = 0;
             // 
             // guna2Button5
@@ -93,7 +93,7 @@
             this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.guna2Button5.Image = global::Client.Properties.Resources.minimize;
             this.guna2Button5.ImageSize = new System.Drawing.Size(10, 10);
-            this.guna2Button5.Location = new System.Drawing.Point(707, 0);
+            this.guna2Button5.Location = new System.Drawing.Point(902, 0);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
             this.guna2Button5.Size = new System.Drawing.Size(50, 50);
@@ -114,7 +114,7 @@
             this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(234)))));
             this.guna2Button4.Image = global::Client.Properties.Resources.Close_White;
             this.guna2Button4.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button4.Location = new System.Drawing.Point(761, 0);
+            this.guna2Button4.Location = new System.Drawing.Point(956, 0);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.PressedColor = System.Drawing.Color.Red;
             this.guna2Button4.PressedDepth = 100;
@@ -171,7 +171,7 @@
             this.mailcontainer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
             this.mailcontainer.Location = new System.Drawing.Point(393, 9);
             this.mailcontainer.Name = "mailcontainer";
-            this.mailcontainer.Size = new System.Drawing.Size(264, 30);
+            this.mailcontainer.Size = new System.Drawing.Size(459, 30);
             this.mailcontainer.TabIndex = 2;
             // 
             // lblmail
@@ -183,7 +183,7 @@
             this.lblmail.Location = new System.Drawing.Point(0, 0);
             this.lblmail.Name = "lblmail";
             this.lblmail.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblmail.Size = new System.Drawing.Size(264, 30);
+            this.lblmail.Size = new System.Drawing.Size(459, 30);
             this.lblmail.TabIndex = 0;
             this.lblmail.Text = "mrcollegebellsystem@gmail.com";
             this.lblmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -348,7 +348,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(200, 49);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(613, 494);
+            this.panel2.Size = new System.Drawing.Size(808, 494);
             this.panel2.TabIndex = 2;
             // 
             // Drager2
@@ -381,11 +381,12 @@
             // 
             // morning_Panel1
             // 
+            this.morning_Panel1.AutoScroll = true;
             this.morning_Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.morning_Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.morning_Panel1.Location = new System.Drawing.Point(0, 0);
             this.morning_Panel1.Name = "morning_Panel1";
-            this.morning_Panel1.Size = new System.Drawing.Size(613, 494);
+            this.morning_Panel1.Size = new System.Drawing.Size(808, 494);
             this.morning_Panel1.TabIndex = 0;
             // 
             // DashBoard
@@ -393,7 +394,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(813, 543);
+            this.ClientSize = new System.Drawing.Size(1008, 543);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlslider);
             this.Controls.Add(this.pnlHeader);

@@ -18,3 +18,4 @@ C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\jose-jwt.dll
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.Controls.Container.resources
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.Editor.resources

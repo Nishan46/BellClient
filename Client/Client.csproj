@@ -82,6 +82,12 @@
     <Compile Include="Data\AuthData.cs" />
     <Compile Include="Data\Colours.cs" />
     <Compile Include="Data\LoginData.cs" />
+    <Compile Include="Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gear.resx">
       <DependentUpon>Gear.cs</DependentUpon>
@@ -175,6 +184,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
