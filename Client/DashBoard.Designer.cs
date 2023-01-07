@@ -53,12 +53,14 @@
             this.drager3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.morning_Panel1 = new Client.Morning_Panel();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mrcLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediaLogo)).BeginInit();
             this.mailcontainer.SuspendLayout();
             this.pnlslider.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -74,11 +76,12 @@
             this.pnlHeader.ForeColor = System.Drawing.Color.Transparent;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(812, 49);
+            this.pnlHeader.Size = new System.Drawing.Size(813, 49);
             this.pnlHeader.TabIndex = 0;
             // 
             // guna2Button5
             // 
+            this.guna2Button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -90,7 +93,7 @@
             this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.guna2Button5.Image = global::Client.Properties.Resources.minimize;
             this.guna2Button5.ImageSize = new System.Drawing.Size(10, 10);
-            this.guna2Button5.Location = new System.Drawing.Point(706, 0);
+            this.guna2Button5.Location = new System.Drawing.Point(707, 0);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
             this.guna2Button5.Size = new System.Drawing.Size(50, 50);
@@ -99,6 +102,7 @@
             // 
             // guna2Button4
             // 
+            this.guna2Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -110,7 +114,7 @@
             this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(234)))));
             this.guna2Button4.Image = global::Client.Properties.Resources.Close_White;
             this.guna2Button4.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button4.Location = new System.Drawing.Point(760, 0);
+            this.guna2Button4.Location = new System.Drawing.Point(761, 0);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.PressedColor = System.Drawing.Color.Red;
             this.guna2Button4.PressedDepth = 100;
@@ -157,6 +161,8 @@
             // 
             // mailcontainer
             // 
+            this.mailcontainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mailcontainer.BackColor = System.Drawing.Color.Transparent;
             this.mailcontainer.BorderColor = System.Drawing.Color.Transparent;
             this.mailcontainer.BorderRadius = 14;
@@ -165,18 +171,19 @@
             this.mailcontainer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
             this.mailcontainer.Location = new System.Drawing.Point(393, 9);
             this.mailcontainer.Name = "mailcontainer";
-            this.mailcontainer.Size = new System.Drawing.Size(263, 30);
+            this.mailcontainer.Size = new System.Drawing.Size(264, 30);
             this.mailcontainer.TabIndex = 2;
             // 
             // lblmail
             // 
-            this.lblmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblmail.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmail.ForeColor = System.Drawing.Color.White;
             this.lblmail.Location = new System.Drawing.Point(0, 0);
             this.lblmail.Name = "lblmail";
             this.lblmail.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblmail.Size = new System.Drawing.Size(263, 30);
+            this.lblmail.Size = new System.Drawing.Size(264, 30);
             this.lblmail.TabIndex = 0;
             this.lblmail.Text = "mrcollegebellsystem@gmail.com";
             this.lblmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,6 +222,7 @@
             // 
             // guna2ImageButton1
             // 
+            this.guna2ImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(21, 21);
@@ -336,10 +344,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel2.Controls.Add(this.morning_Panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(200, 49);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(612, 494);
+            this.panel2.Size = new System.Drawing.Size(613, 494);
             this.panel2.TabIndex = 2;
             // 
             // Drager2
@@ -370,12 +379,21 @@
             this.Drager5.TargetControl = this.mrcLogo;
             this.Drager5.UseTransparentDrag = true;
             // 
+            // morning_Panel1
+            // 
+            this.morning_Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.morning_Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.morning_Panel1.Location = new System.Drawing.Point(0, 0);
+            this.morning_Panel1.Name = "morning_Panel1";
+            this.morning_Panel1.Size = new System.Drawing.Size(613, 494);
+            this.morning_Panel1.TabIndex = 0;
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(812, 543);
+            this.ClientSize = new System.Drawing.Size(813, 543);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlslider);
             this.Controls.Add(this.pnlHeader);
@@ -391,6 +409,7 @@
             this.pnlslider.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -420,5 +439,6 @@
         private Guna.UI2.WinForms.Guna2DragControl Drager4;
         private Guna.UI2.WinForms.Guna2DragControl Drager5;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Morning_Panel morning_Panel1;
     }
 }

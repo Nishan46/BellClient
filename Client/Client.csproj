@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Container.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Container.Designer.cs">
+      <DependentUpon>Container.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core.cs" />
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
@@ -96,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\Container.resx">
+      <DependentUpon>Container.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>

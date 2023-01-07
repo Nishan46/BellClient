@@ -413,10 +413,10 @@
             // 
             this.Saturday.AutoSize = true;
             this.Saturday.Checked = true;
-            this.Saturday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.Saturday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
             this.Saturday.CheckedState.BorderRadius = 0;
             this.Saturday.CheckedState.BorderThickness = 0;
-            this.Saturday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.Saturday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
             this.Saturday.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Saturday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Saturday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -436,10 +436,10 @@
             // 
             this.Sunday.AutoSize = true;
             this.Sunday.Checked = true;
-            this.Sunday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.Sunday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
             this.Sunday.CheckedState.BorderRadius = 0;
             this.Sunday.CheckedState.BorderThickness = 0;
-            this.Sunday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.Sunday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
             this.Sunday.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Sunday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sunday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
