@@ -13,6 +13,52 @@ namespace Client
         public DashBoard()
         {
             InitializeComponent();
+
+            Thread ShutdownThread = new Thread(() =>
+            {
+                while (true)
+                {
+                    if (Convert.ToDateTime(Core.ReadDefaults("ShutDownTime")).ToLongTimeString() == DateTime.Now.ToLongTimeString() && Core.IsShutDownDay(DateTime.Now.DayOfWeek.ToString()))
+                    {
+                        lblheader.Font = new Font(Core.setPoppins().Families[0], 9, lblheader.Font.Style);
+                        lblheader.ForeColor = Color.Red;
+                        lblheader.Text = "Preparing to Shutdown ...";
+                        Thread.Sleep(1000);
+                        for (int i = 59; i > 0; i--)
+                        {
+                            if (i <= 5)
+                            {
+                                var psi = new ProcessStartInfo("shutdown", "/s /t 5");
+                                psi.CreateNoWindow = true;
+                                psi.UseShellExecute = false;
+                                Process.Start(psi);
+                                lblheader.Text = $"Shutdown in {i}s";
+                            }
+                            else
+                            {
+                                lblheader.Text = $"Shutdown in {i}s Click here to cancel";
+                                lblheader.Cursor = Cursors.Hand;
+                                if (Core.cancel_shutown)
+                                {
+                                    Core.cancel_shutown = false;
+                                    lblheader.ForeColor = Color.Gainsboro;
+                                    lblheader.Cursor = Cursors.Default;
+                                    lblheader.Font = new Font(Core.setRaleway().Families[0], 16, lblheader.Font.Style);
+                                    lblheader.Text = "MRC Bell System";
+                                    break;
+                                }
+                            }
+                            if (i == 2)
+                            {
+                                Process.GetCurrentProcess().Kill();
+                            }
+                            Thread.Sleep(1000);
+                            Core.shutdown_timer = i;
+                        }
+                    }
+                }
+            });
+            ShutdownThread.Start();
             foreach (Control controls in Controls)
             {
                 controls.Font = new Font(Core.setRaleway().Families[0], controls.Font.Size, controls.Font.Style);
@@ -133,6 +179,14 @@ namespace Client
         {
             Gear gr = new Gear();
             gr.Show();
+        }
+
+        private void CancelShutDown(object sender, EventArgs e)
+        {
+            if(Core.shutdown_timer != 0 && Core.shutdown_timer >5)
+            {
+                Core.cancel_shutown = true;
+            }
         }
     }
 }

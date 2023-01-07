@@ -93,5 +93,29 @@ namespace Defaults.Properties {
                 this["Friday"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Saturday {
+            get {
+                return ((bool)(this["Saturday"]));
+            }
+            set {
+                this["Saturday"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Sunday {
+            get {
+                return ((bool)(this["Sunday"]));
+            }
+            set {
+                this["Sunday"] = value;
+            }
+        }
     }
 }

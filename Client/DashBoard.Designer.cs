@@ -130,6 +130,7 @@
             this.lblheader.TabIndex = 5;
             this.lblheader.Text = "MRC Bell System";
             this.lblheader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblheader.Click += new System.EventHandler(this.CancelShutDown);
             // 
             // mrcLogo
             // 

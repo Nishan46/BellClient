@@ -26,15 +26,24 @@ namespace Client
             checkShutDownDays();
             AcceptButton = btnLogOut;
             timeShut.Value = Convert.ToDateTime(Core.ReadDefaults("ShutDownTime"));
+            System.Windows.Forms.Timer viewTime = new System.Windows.Forms.Timer();
+            viewTime.Enabled = true;
+            viewTime.Interval = 1000;
+            viewTime.Tick += ViewTime;
+        }
+
+        private void ViewTime(object sender, EventArgs e)
+        {
+            lbltime.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void HideThis(object sender, EventArgs e)
         {
-            this.Hide();
+            ActiveForm.Dispose();
         }
         private void ChangeShutDownTime(object sender, EventArgs e)
         {       
-            Core.WriteDefaults("ShutDownTime", timeShut.Value.ToString());
+            Core.WriteDefaults("ShutDownTime", timeShut.Value);
         }
         private void setStartupValues(object sender, EventArgs e)
         {
@@ -65,7 +74,7 @@ namespace Client
         }
         private void checkShutDownDays()
         {
-            Guna2CheckBox[] boxes = { Monday, Tuesday, Wednesday, Thursday, Friday };
+            Guna2CheckBox[] boxes = { Monday, Tuesday, Wednesday, Thursday, Friday , Saturday , Sunday };
             foreach (var items in boxes)
             {
                 items.Checked = Convert.ToBoolean(Core.ReadDefaults(items.Name));

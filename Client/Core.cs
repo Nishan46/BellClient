@@ -9,6 +9,11 @@ using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Text;
 using Microsoft.Win32;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Threading;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Client
 {
@@ -17,6 +22,8 @@ namespace Client
         public static RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         public static string Code = "NOT-NULL";
         public static bool code_resend = true;
+        public static bool cancel_shutown = false;
+        public static int shutdown_timer = 0;
 
         private static PrivateFontCollection fontCollection = new PrivateFontCollection();
         #region DLL_IMPORTS
@@ -118,6 +125,9 @@ namespace Client
             }
         }
 
-
+        public static bool IsShutDownDay(string day)
+        {
+            return Convert.ToBoolean(ReadDefaults(day));
+        }
     }
 }

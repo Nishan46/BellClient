@@ -30,8 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.FormDS = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.lblDay = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblheader = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.checkRegs = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,13 +42,16 @@
             this.Friday = new Guna.UI2.WinForms.Guna2CheckBox();
             this.timeShut = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblmsg = new System.Windows.Forms.Label();
             this.lblQLogOut = new System.Windows.Forms.Label();
             this.txtCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.Drager = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.txtstatus = new System.Windows.Forms.Label();
+            this.lbltime = new System.Windows.Forms.Label();
+            this.Saturday = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.Sunday = new Guna.UI2.WinForms.Guna2CheckBox();
             this.SuspendLayout();
             // 
             // FormDS
@@ -63,23 +65,16 @@
             this.FormDS.DragStartTransparencyValue = 1D;
             this.FormDS.TransparentWhileDrag = true;
             // 
-            // lblDay
+            // lblheader
             // 
-            this.lblDay.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.lblDay.Location = new System.Drawing.Point(1, 2);
-            this.lblDay.Name = "lblDay";
-            this.lblDay.Size = new System.Drawing.Size(280, 42);
-            this.lblDay.TabIndex = 4;
-            this.lblDay.Text = "Settings";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.panel1.Location = new System.Drawing.Point(8, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(100, 5);
-            this.panel1.TabIndex = 5;
+            this.lblheader.Font = new System.Drawing.Font("Poppins", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblheader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.lblheader.Location = new System.Drawing.Point(8, 0);
+            this.lblheader.Name = "lblheader";
+            this.lblheader.Size = new System.Drawing.Size(280, 50);
+            this.lblheader.TabIndex = 4;
+            this.lblheader.Text = "Settings";
+            this.lblheader.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label2
             // 
@@ -150,7 +145,7 @@
             this.Monday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Monday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Monday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Monday.Location = new System.Drawing.Point(23, 167);
+            this.Monday.Location = new System.Drawing.Point(26, 169);
             this.Monday.Name = "Monday";
             this.Monday.Size = new System.Drawing.Size(71, 20);
             this.Monday.TabIndex = 6;
@@ -173,7 +168,7 @@
             this.Tuesday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Tuesday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tuesday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Tuesday.Location = new System.Drawing.Point(129, 167);
+            this.Tuesday.Location = new System.Drawing.Point(26, 192);
             this.Tuesday.Name = "Tuesday";
             this.Tuesday.Size = new System.Drawing.Size(69, 20);
             this.Tuesday.TabIndex = 6;
@@ -196,7 +191,7 @@
             this.Wednesday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Wednesday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Wednesday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Wednesday.Location = new System.Drawing.Point(235, 167);
+            this.Wednesday.Location = new System.Drawing.Point(26, 215);
             this.Wednesday.Name = "Wednesday";
             this.Wednesday.Size = new System.Drawing.Size(86, 20);
             this.Wednesday.TabIndex = 6;
@@ -219,7 +214,7 @@
             this.Thursday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Thursday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Thursday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Thursday.Location = new System.Drawing.Point(23, 202);
+            this.Thursday.Location = new System.Drawing.Point(115, 169);
             this.Thursday.Name = "Thursday";
             this.Thursday.Size = new System.Drawing.Size(74, 20);
             this.Thursday.TabIndex = 6;
@@ -242,7 +237,7 @@
             this.Friday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Friday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Friday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Friday.Location = new System.Drawing.Point(129, 202);
+            this.Friday.Location = new System.Drawing.Point(115, 192);
             this.Friday.Name = "Friday";
             this.Friday.Size = new System.Drawing.Size(57, 20);
             this.Friday.TabIndex = 6;
@@ -283,16 +278,16 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Interrupts";
             // 
-            // label6
+            // lblmsg
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(12, 262);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(288, 32);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "You\'ve logged in as mrcollegebellsystem@gmail.com\r\nand this is your primary accou" +
+            this.lblmsg.AutoSize = true;
+            this.lblmsg.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmsg.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblmsg.Location = new System.Drawing.Point(12, 262);
+            this.lblmsg.Name = "lblmsg";
+            this.lblmsg.Size = new System.Drawing.Size(288, 32);
+            this.lblmsg.TabIndex = 4;
+            this.lblmsg.Text = "You\'ve logged in as mrcollegebellsystem@gmail.com\r\nand this is your primary accou" +
     "nt.";
             // 
             // lblQLogOut
@@ -387,7 +382,7 @@
             // 
             this.Drager.DockIndicatorTransparencyValue = 0.6D;
             this.Drager.DragStartTransparencyValue = 1D;
-            this.Drager.TargetControl = this.lblDay;
+            this.Drager.TargetControl = this.lblheader;
             this.Drager.UseTransparentDrag = true;
             // 
             // txtstatus
@@ -404,6 +399,62 @@
     "th Logout Bell-Code.";
             this.txtstatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lbltime
+            // 
+            this.lbltime.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime.ForeColor = System.Drawing.Color.DimGray;
+            this.lbltime.Location = new System.Drawing.Point(178, 147);
+            this.lbltime.Name = "lbltime";
+            this.lbltime.Size = new System.Drawing.Size(143, 17);
+            this.lbltime.TabIndex = 4;
+            this.lbltime.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // Saturday
+            // 
+            this.Saturday.AutoSize = true;
+            this.Saturday.Checked = true;
+            this.Saturday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.Saturday.CheckedState.BorderRadius = 0;
+            this.Saturday.CheckedState.BorderThickness = 0;
+            this.Saturday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.Saturday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Saturday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Saturday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Saturday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.Saturday.Location = new System.Drawing.Point(245, 169);
+            this.Saturday.Name = "Saturday";
+            this.Saturday.Size = new System.Drawing.Size(73, 20);
+            this.Saturday.TabIndex = 6;
+            this.Saturday.Text = "Saturday";
+            this.Saturday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Saturday.UncheckedState.BorderRadius = 0;
+            this.Saturday.UncheckedState.BorderThickness = 0;
+            this.Saturday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Saturday.CheckedChanged += new System.EventHandler(this.setUpShutDownDates);
+            // 
+            // Sunday
+            // 
+            this.Sunday.AutoSize = true;
+            this.Sunday.Checked = true;
+            this.Sunday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.Sunday.CheckedState.BorderRadius = 0;
+            this.Sunday.CheckedState.BorderThickness = 0;
+            this.Sunday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.Sunday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Sunday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Sunday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sunday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.Sunday.Location = new System.Drawing.Point(245, 192);
+            this.Sunday.Name = "Sunday";
+            this.Sunday.Size = new System.Drawing.Size(65, 20);
+            this.Sunday.TabIndex = 6;
+            this.Sunday.Text = "Sunday";
+            this.Sunday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Sunday.UncheckedState.BorderRadius = 0;
+            this.Sunday.UncheckedState.BorderThickness = 0;
+            this.Sunday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Sunday.CheckedChanged += new System.EventHandler(this.setUpShutDownDates);
+            // 
             // Gear
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,20 +466,22 @@
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.timeShut);
+            this.Controls.Add(this.Sunday);
+            this.Controls.Add(this.Saturday);
             this.Controls.Add(this.Friday);
             this.Controls.Add(this.Thursday);
             this.Controls.Add(this.Wednesday);
             this.Controls.Add(this.Tuesday);
             this.Controls.Add(this.Monday);
             this.Controls.Add(this.checkRegs);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbltime);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtstatus);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblmsg);
             this.Controls.Add(this.lblQLogOut);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblDay);
+            this.Controls.Add(this.lblheader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Gear";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -441,8 +494,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDS;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblDay;
+        private System.Windows.Forms.Label lblheader;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CheckBox checkRegs;
         private System.Windows.Forms.Label label3;
@@ -455,11 +507,14 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker timeShut;
         private Guna.UI2.WinForms.Guna2TextBox txtCode;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblmsg;
         private System.Windows.Forms.Label lblQLogOut;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2DragControl Drager;
         private System.Windows.Forms.Label txtstatus;
+        private System.Windows.Forms.Label lbltime;
+        private Guna.UI2.WinForms.Guna2CheckBox Sunday;
+        private Guna.UI2.WinForms.Guna2CheckBox Saturday;
     }
 }
