@@ -47,7 +47,7 @@
             // 
             // container1
             // 
-            this.container1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.container1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.container1.Dock = System.Windows.Forms.DockStyle.Top;
             this.container1.Location = new System.Drawing.Point(0, 68);
             this.container1.Name = "container1";
