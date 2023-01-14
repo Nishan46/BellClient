@@ -48,7 +48,7 @@
             this.btnManual = new Guna.UI2.WinForms.Guna2Button();
             this.btnMorning = new Guna.UI2.WinForms.Guna2Button();
             this.btnsch = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlcontainer = new System.Windows.Forms.Panel();
             this.Drager2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.drager3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -60,7 +60,7 @@
             this.mailcontainer.SuspendLayout();
             this.pnlslider.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlcontainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -341,15 +341,16 @@
             this.btnsch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnsch.Click += new System.EventHandler(this.SelectedBtn);
             // 
-            // panel2
+            // pnlcontainer
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel2.Controls.Add(this.morning_Panel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(200, 49);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(808, 494);
-            this.panel2.TabIndex = 2;
+            this.pnlcontainer.AutoScroll = true;
+            this.pnlcontainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.pnlcontainer.Controls.Add(this.morning_Panel1);
+            this.pnlcontainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlcontainer.Location = new System.Drawing.Point(200, 49);
+            this.pnlcontainer.Name = "pnlcontainer";
+            this.pnlcontainer.Size = new System.Drawing.Size(808, 494);
+            this.pnlcontainer.TabIndex = 2;
             // 
             // Drager2
             // 
@@ -381,12 +382,11 @@
             // 
             // morning_Panel1
             // 
-            this.morning_Panel1.AutoScroll = true;
+            this.morning_Panel1.AutoSize = true;
             this.morning_Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.morning_Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.morning_Panel1.Location = new System.Drawing.Point(0, 0);
+            this.morning_Panel1.Location = new System.Drawing.Point(0, 1);
             this.morning_Panel1.Name = "morning_Panel1";
-            this.morning_Panel1.Size = new System.Drawing.Size(808, 494);
+            this.morning_Panel1.Size = new System.Drawing.Size(786, 674);
             this.morning_Panel1.TabIndex = 0;
             // 
             // DashBoard
@@ -395,7 +395,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 543);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlcontainer);
             this.Controls.Add(this.pnlslider);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -410,7 +410,8 @@
             this.pnlslider.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.pnlcontainer.ResumeLayout(false);
+            this.pnlcontainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -432,7 +433,7 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlcontainer;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2DragControl Drager2;

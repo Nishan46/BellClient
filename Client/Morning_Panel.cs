@@ -15,7 +15,6 @@ namespace Client
         public Morning_Panel()
         {
             InitializeComponent();
-            
         }
     }
 }

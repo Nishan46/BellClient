@@ -13,7 +13,6 @@ namespace Client
         public DashBoard()
         {
             InitializeComponent();
-
             Thread ShutdownThread = new Thread(() =>
             {
                 while (true)

@@ -30,6 +30,8 @@
         {
             this.lblheader = new System.Windows.Forms.Label();
             this.container1 = new Client.Controls.Container();
+            this.container2 = new Client.Controls.Container();
+            this.container3 = new Client.Controls.Container();
             this.SuspendLayout();
             // 
             // lblheader
@@ -54,11 +56,31 @@
             this.container1.Size = new System.Drawing.Size(630, 202);
             this.container1.TabIndex = 6;
             // 
+            // container2
+            // 
+            this.container2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.container2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.container2.Location = new System.Drawing.Point(0, 270);
+            this.container2.Name = "container2";
+            this.container2.Size = new System.Drawing.Size(630, 202);
+            this.container2.TabIndex = 7;
+            // 
+            // container3
+            // 
+            this.container3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.container3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.container3.Location = new System.Drawing.Point(0, 472);
+            this.container3.Name = "container3";
+            this.container3.Size = new System.Drawing.Size(630, 202);
+            this.container3.TabIndex = 8;
+            // 
             // Morning_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Controls.Add(this.container3);
+            this.Controls.Add(this.container2);
             this.Controls.Add(this.container1);
             this.Controls.Add(this.lblheader);
             this.Name = "Morning_Panel";
@@ -71,5 +93,7 @@
 
         private System.Windows.Forms.Label lblheader;
         private Controls.Container container1;
+        private Controls.Container container2;
+        private Controls.Container container3;
     }
 }
