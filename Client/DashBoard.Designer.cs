@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.lblheader = new System.Windows.Forms.Label();
@@ -40,6 +43,7 @@
             this.FormDS = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Drager = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pnlslider = new System.Windows.Forms.Panel();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
@@ -49,11 +53,14 @@
             this.btnMorning = new Guna.UI2.WinForms.Guna2Button();
             this.btnsch = new Guna.UI2.WinForms.Guna2Button();
             this.pnlcontainer = new System.Windows.Forms.Panel();
+            this.PageContain = new Bunifu.UI.WinForms.BunifuPages();
+            this.Morning = new System.Windows.Forms.TabPage();
+            this.morning_Panel1 = new Client.Morning_Panel();
+            this.CustomUser = new System.Windows.Forms.TabPage();
             this.Drager2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.drager3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.morning_Panel1 = new Client.Morning_Panel();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mrcLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediaLogo)).BeginInit();
@@ -61,11 +68,14 @@
             this.pnlslider.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlcontainer.SuspendLayout();
+            this.PageContain.SuspendLayout();
+            this.Morning.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
+            this.pnlHeader.Controls.Add(this.guna2Button1);
             this.pnlHeader.Controls.Add(this.guna2Button5);
             this.pnlHeader.Controls.Add(this.guna2Button4);
             this.pnlHeader.Controls.Add(this.lblheader);
@@ -76,8 +86,29 @@
             this.pnlHeader.ForeColor = System.Drawing.Color.Transparent;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1008, 49);
+            this.pnlHeader.Size = new System.Drawing.Size(975, 49);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
+            this.guna2Button1.Image = global::Client.Properties.Resources.minimize;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(10, 10);
+            this.guna2Button1.Location = new System.Drawing.Point(816, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.guna2Button1.Size = new System.Drawing.Size(50, 50);
+            this.guna2Button1.TabIndex = 0;
+            this.guna2Button1.Click += new System.EventHandler(this.Minimize_Dash);
             // 
             // guna2Button5
             // 
@@ -93,12 +124,12 @@
             this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.guna2Button5.Image = global::Client.Properties.Resources.minimize;
             this.guna2Button5.ImageSize = new System.Drawing.Size(10, 10);
-            this.guna2Button5.Location = new System.Drawing.Point(902, 0);
+            this.guna2Button5.Location = new System.Drawing.Point(869, 0);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
             this.guna2Button5.Size = new System.Drawing.Size(50, 50);
             this.guna2Button5.TabIndex = 0;
-            this.guna2Button5.Click += new System.EventHandler(this.Minimize_Dash);
+            this.guna2Button5.Click += new System.EventHandler(this.Maximize_Dash);
             // 
             // guna2Button4
             // 
@@ -114,7 +145,7 @@
             this.guna2Button4.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(0)))), ((int)(((byte)(234)))));
             this.guna2Button4.Image = global::Client.Properties.Resources.Close_White;
             this.guna2Button4.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button4.Location = new System.Drawing.Point(956, 0);
+            this.guna2Button4.Location = new System.Drawing.Point(923, 0);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.PressedColor = System.Drawing.Color.Red;
             this.guna2Button4.PressedDepth = 100;
@@ -171,7 +202,7 @@
             this.mailcontainer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
             this.mailcontainer.Location = new System.Drawing.Point(393, 9);
             this.mailcontainer.Name = "mailcontainer";
-            this.mailcontainer.Size = new System.Drawing.Size(459, 30);
+            this.mailcontainer.Size = new System.Drawing.Size(417, 30);
             this.mailcontainer.TabIndex = 2;
             // 
             // lblmail
@@ -183,7 +214,7 @@
             this.lblmail.Location = new System.Drawing.Point(0, 0);
             this.lblmail.Name = "lblmail";
             this.lblmail.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblmail.Size = new System.Drawing.Size(459, 30);
+            this.lblmail.Size = new System.Drawing.Size(417, 30);
             this.lblmail.TabIndex = 0;
             this.lblmail.Text = "mrcollegebellsystem@gmail.com";
             this.lblmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,6 +240,7 @@
             // pnlslider
             // 
             this.pnlslider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.pnlslider.Controls.Add(this.btnAdd);
             this.pnlslider.Controls.Add(this.guna2ImageButton1);
             this.pnlslider.Controls.Add(this.panel1);
             this.pnlslider.Controls.Add(this.btnManual);
@@ -219,6 +251,23 @@
             this.pnlslider.Name = "pnlslider";
             this.pnlslider.Size = new System.Drawing.Size(200, 494);
             this.pnlslider.TabIndex = 1;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.HoverState.ImageSize = new System.Drawing.Size(21, 21);
+            this.btnAdd.Image = global::Client.Properties.Resources.add;
+            this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.ImageRotate = 0F;
+            this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAdd.Location = new System.Drawing.Point(164, 461);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.PressedState.ImageSize = new System.Drawing.Size(19, 19);
+            this.btnAdd.Size = new System.Drawing.Size(30, 30);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Click += new System.EventHandler(this.showAdd);
             // 
             // guna2ImageButton1
             // 
@@ -345,12 +394,78 @@
             // 
             this.pnlcontainer.AutoScroll = true;
             this.pnlcontainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.pnlcontainer.Controls.Add(this.morning_Panel1);
+            this.pnlcontainer.Controls.Add(this.PageContain);
             this.pnlcontainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlcontainer.Location = new System.Drawing.Point(200, 49);
             this.pnlcontainer.Name = "pnlcontainer";
-            this.pnlcontainer.Size = new System.Drawing.Size(808, 494);
+            this.pnlcontainer.Size = new System.Drawing.Size(775, 494);
             this.pnlcontainer.TabIndex = 2;
+            // 
+            // PageContain
+            // 
+            this.PageContain.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.PageContain.AllowTransitions = true;
+            this.PageContain.Controls.Add(this.Morning);
+            this.PageContain.Controls.Add(this.CustomUser);
+            this.PageContain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PageContain.Location = new System.Drawing.Point(0, 0);
+            this.PageContain.Multiline = true;
+            this.PageContain.Name = "PageContain";
+            this.PageContain.Page = this.CustomUser;
+            this.PageContain.PageIndex = 1;
+            this.PageContain.PageName = "CustomUser";
+            this.PageContain.PageTitle = "CustomUser";
+            this.PageContain.SelectedIndex = 0;
+            this.PageContain.Size = new System.Drawing.Size(775, 494);
+            this.PageContain.TabIndex = 0;
+            animation1.AnimateOnlyDifferences = false;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.PageContain.Transition = animation1;
+            this.PageContain.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            // 
+            // Morning
+            // 
+            this.Morning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Morning.Controls.Add(this.morning_Panel1);
+            this.Morning.Location = new System.Drawing.Point(4, 4);
+            this.Morning.Name = "Morning";
+            this.Morning.Padding = new System.Windows.Forms.Padding(3);
+            this.Morning.Size = new System.Drawing.Size(767, 468);
+            this.Morning.TabIndex = 0;
+            this.Morning.Text = "Morning";
+            // 
+            // morning_Panel1
+            // 
+            this.morning_Panel1.AutoScroll = true;
+            this.morning_Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.morning_Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.morning_Panel1.Location = new System.Drawing.Point(3, 3);
+            this.morning_Panel1.Name = "morning_Panel1";
+            this.morning_Panel1.Size = new System.Drawing.Size(761, 462);
+            this.morning_Panel1.TabIndex = 0;
+            // 
+            // CustomUser
+            // 
+            this.CustomUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.CustomUser.Location = new System.Drawing.Point(4, 4);
+            this.CustomUser.Name = "CustomUser";
+            this.CustomUser.Padding = new System.Windows.Forms.Padding(3);
+            this.CustomUser.Size = new System.Drawing.Size(767, 468);
+            this.CustomUser.TabIndex = 1;
+            this.CustomUser.Text = "CustomUser";
             // 
             // Drager2
             // 
@@ -380,21 +495,12 @@
             this.Drager5.TargetControl = this.mrcLogo;
             this.Drager5.UseTransparentDrag = true;
             // 
-            // morning_Panel1
-            // 
-            this.morning_Panel1.AutoSize = true;
-            this.morning_Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.morning_Panel1.Location = new System.Drawing.Point(0, 1);
-            this.morning_Panel1.Name = "morning_Panel1";
-            this.morning_Panel1.Size = new System.Drawing.Size(786, 674);
-            this.morning_Panel1.TabIndex = 0;
-            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1008, 543);
+            this.ClientSize = new System.Drawing.Size(975, 543);
             this.Controls.Add(this.pnlcontainer);
             this.Controls.Add(this.pnlslider);
             this.Controls.Add(this.pnlHeader);
@@ -411,7 +517,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlcontainer.ResumeLayout(false);
-            this.pnlcontainer.PerformLayout();
+            this.PageContain.ResumeLayout(false);
+            this.Morning.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -441,6 +548,11 @@
         private Guna.UI2.WinForms.Guna2DragControl Drager4;
         private Guna.UI2.WinForms.Guna2DragControl Drager5;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Bunifu.UI.WinForms.BunifuPages PageContain;
+        private System.Windows.Forms.TabPage Morning;
+        private System.Windows.Forms.TabPage CustomUser;
         private Morning_Panel morning_Panel1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAdd;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

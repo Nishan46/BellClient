@@ -13,10 +13,12 @@ namespace Client
         public DashBoard()
         {
             InitializeComponent();
+            btnMorning.PerformClick();
             Thread ShutdownThread = new Thread(() =>
             {
                 while (true)
                 {
+                    Thread.Sleep(1000);
                     if (Convert.ToDateTime(Core.ReadDefaults("ShutDownTime")).ToLongTimeString() == DateTime.Now.ToLongTimeString() && Core.IsShutDownDay(DateTime.Now.DayOfWeek.ToString()))
                     {
                         lblheader.Font = new Font(Core.setPoppins().Families[0], 9, lblheader.Font.Style);
@@ -62,7 +64,7 @@ namespace Client
                     }
                 }
             });
-            ShutdownThread.Start();
+            /*ShutdownThread.Start();*/
             foreach (Control controls in Controls)
             {
                 controls.Font = new Font(Core.setRaleway().Families[0], controls.Font.Size, controls.Font.Style);
@@ -177,6 +179,14 @@ namespace Client
                 }
             }
 
+            if(btn == btnMorning)
+            {
+                PageContain.SetPage(Morning);
+            }
+            else if(btn == btnManual)
+            {
+                PageContain.SetPage(CustomUser);
+            }
         }
 
         private void showSettings(object sender, EventArgs e)
@@ -190,6 +200,27 @@ namespace Client
             if(Core.shutdown_timer != 0 && Core.shutdown_timer >5)
             {
                 Core.cancel_shutown = true;
+            }
+        }
+
+        private void showAdd(object sender, EventArgs e)
+        {
+            Adder adder = new Adder();
+            adder.Show();
+            
+        }
+
+        private void Maximize_Dash(object sender, EventArgs e)
+        {
+            if(WindowState == FormWindowState.Normal)
+            {
+
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+
+                WindowState = FormWindowState.Normal;
             }
         }
     }

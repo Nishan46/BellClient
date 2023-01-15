@@ -5,14 +5,15 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Editor : Form
+    public partial class ManualUser : UserControl
     {
-        public Editor()
+        public ManualUser()
         {
             InitializeComponent();
         }

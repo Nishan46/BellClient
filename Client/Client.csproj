@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -50,6 +51,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\..\..\..\Downloads\Compressed\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Utils.1.0.6\lib\net\Bunifu.Utils.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.3.9, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.9\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
@@ -62,10 +69,18 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adder.Designer.cs">
+      <DependentUpon>Adder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BellData\MorningData.cs" />
     <Compile Include="Controls\Container.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,11 +97,11 @@
     <Compile Include="Data\AuthData.cs" />
     <Compile Include="Data\Colours.cs" />
     <Compile Include="Data\LoginData.cs" />
-    <Compile Include="Editor.cs">
+    <Compile Include="MorningEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Editor.Designer.cs">
-      <DependentUpon>Editor.cs</DependentUpon>
+    <Compile Include="MorningEditor.Designer.cs">
+      <DependentUpon>MorningEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Gear.cs">
       <SubType>Form</SubType>
@@ -100,6 +115,12 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManualUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManualUser.Designer.cs">
+      <DependentUpon>ManualUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Morning_Panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,14 +129,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Adder.resx">
+      <DependentUpon>Adder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Container.resx">
       <DependentUpon>Container.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editor.resx">
-      <DependentUpon>Editor.cs</DependentUpon>
+    <EmbeddedResource Include="MorningEditor.resx">
+      <DependentUpon>MorningEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gear.resx">
       <DependentUpon>Gear.cs</DependentUpon>
@@ -123,9 +147,13 @@
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManualUser.resx">
+      <DependentUpon>ManualUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Morning_Panel.resx">
       <DependentUpon>Morning_Panel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -165,37 +193,65 @@
   <ItemGroup>
     <None Include="Resources\Poppins-Medium.ttf" />
     <None Include="Resources\Raleway-Medium.ttf" />
-    <None Include="Resources\sch.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\eye.png" />
+    <None Include="Resources\Edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minimize.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Close_White.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mr.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\play.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Stop.png" />
+    <None Include="Resources\Mute.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sound.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Edit.png" />
+    <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.4.0.2\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.4.0.2\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props'))" />
+  </Target>
 </Project>

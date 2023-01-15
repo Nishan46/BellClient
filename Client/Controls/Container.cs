@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.BellData;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,17 @@ namespace Client.Controls
             InitializeComponent();
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        private void Edit(object sender, EventArgs e)
         {
-
+            foreach(MorningData morningData in Core.MorningList)
+            {
+                if(morningData.Name == lblheader.Text)
+                {
+                    Core.edit_id = morningData.Id;
+                }
+            }
+            MorningEditor morningEditor = new MorningEditor();
+            morningEditor.Show();
         }
     }
 }
