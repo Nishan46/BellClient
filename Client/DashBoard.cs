@@ -5,6 +5,7 @@ using Client.Properties;
 using System.Diagnostics;
 using System.Threading;
 using Guna.UI2.WinForms;
+using WMPLib;
 
 namespace Client
 {
@@ -64,7 +65,7 @@ namespace Client
                     }
                 }
             });
-            /*ShutdownThread.Start();*/
+            ShutdownThread.Start();
             foreach (Control controls in Controls)
             {
                 controls.Font = new Font(Core.setRaleway().Families[0], controls.Font.Size, controls.Font.Style);
@@ -87,7 +88,6 @@ namespace Client
             timeViewr.Interval = 1000;
             timeViewr.Tick += ViewDateTime;
         }
-
 
         private bool is_minimized = false;
         private void checkConnection()

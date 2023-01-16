@@ -20,3 +20,5 @@ C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.exe.licenses
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.MorningEditor.resources
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.Adder.resources
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Interop.WMPLib.dll
+C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.csproj.ResolveComReference.cache

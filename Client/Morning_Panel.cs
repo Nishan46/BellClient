@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Client
@@ -23,9 +24,9 @@ namespace Client
             {
                 Core.MorningList = Core.TotheMorning($@"{Core.BaseDir}\Db\Morning.Db.json");
             }
-            
 
-            Timer Updates = new Timer();
+
+            System.Windows.Forms.Timer Updates = new System.Windows.Forms.Timer();
             Updates.Enabled = true;
             Updates.Interval = 1000;
             Updates.Tick += Updates_Tick;
@@ -35,6 +36,7 @@ namespace Client
         {
             if (Core.hasToUpdate)
             {
+
                 pnldraw.Controls.Clear();
                 for (int i = Core.MorningList.Count-1; i >=0 ; i--)
                 {
@@ -50,11 +52,14 @@ namespace Client
                     container.Friday.Checked = morningData.Friday;
                     container.Saturday.Checked = morningData.Saturday;
                     container.Sunday.Checked = morningData.Sunday;
+                    container.lastChecked = morningData.LastUpdated;
+                    container.path = morningData.Path;
                     container.Dock = DockStyle.Top;
                     pnldraw.Controls.Add(container);
                 }
                 Core.hasToUpdate = false;
             }
+
         }
 
         private void Loading(object sender, EventArgs e)
@@ -74,6 +79,8 @@ namespace Client
                 container.Friday.Checked = morningData.Friday;
                 container.Saturday.Checked = morningData.Saturday;
                 container.Sunday.Checked = morningData.Sunday;
+                container.lastChecked = morningData.LastUpdated;
+                container.path = morningData.Path;
                 container.Dock = DockStyle.Top;
                 pnldraw.Controls.Add(container);
             }

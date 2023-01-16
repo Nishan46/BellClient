@@ -42,15 +42,17 @@
             this.lblheader = new System.Windows.Forms.Label();
             this.lblstartTime = new System.Windows.Forms.Label();
             this.lblendTime = new System.Windows.Forms.Label();
-            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.seekBar = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.btnPlay = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.lblcp = new System.Windows.Forms.Label();
+            this.vol = new Guna.UI2.WinForms.Guna2TrackBar();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblduration = new System.Windows.Forms.Label();
+            this.lblpos = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -285,12 +287,11 @@
             // 
             // lblstartTime
             // 
-            this.lblstartTime.AutoSize = true;
             this.lblstartTime.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblstartTime.ForeColor = System.Drawing.Color.Black;
-            this.lblstartTime.Location = new System.Drawing.Point(32, 112);
+            this.lblstartTime.Location = new System.Drawing.Point(31, 111);
             this.lblstartTime.Name = "lblstartTime";
-            this.lblstartTime.Size = new System.Drawing.Size(98, 19);
+            this.lblstartTime.Size = new System.Drawing.Size(98, 27);
             this.lblstartTime.TabIndex = 20;
             this.lblstartTime.Text = "START : 06.00 AM";
             // 
@@ -306,43 +307,44 @@
             this.lblendTime.Text = "END : 07.00 AM";
             this.lblendTime.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // guna2ProgressBar1
+            // seekBar
             // 
-            this.guna2ProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ProgressBar1.BorderRadius = 2;
-            this.guna2ProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.guna2ProgressBar1.Location = new System.Drawing.Point(108, 72);
-            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
-            this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.guna2ProgressBar1.Size = new System.Drawing.Size(399, 5);
-            this.guna2ProgressBar1.TabIndex = 21;
-            this.guna2ProgressBar1.Text = "guna2ProgressBar1";
-            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ProgressBar1.Value = 60;
+            this.seekBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.seekBar.BorderRadius = 2;
+            this.seekBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.seekBar.Location = new System.Drawing.Point(108, 72);
+            this.seekBar.Name = "seekBar";
+            this.seekBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.seekBar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
+            this.seekBar.Size = new System.Drawing.Size(399, 5);
+            this.seekBar.TabIndex = 21;
+            this.seekBar.Text = "guna2ProgressBar1";
+            this.seekBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.seekBar.Value = 100;
             // 
-            // guna2Button1
+            // btnPlay
             // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button1.BorderRadius = 2;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button1.Image = global::Client.Properties.Resources.play;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button1.Location = new System.Drawing.Point(284, 42);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
-            this.guna2Button1.PressedDepth = 100;
-            this.guna2Button1.Size = new System.Drawing.Size(20, 20);
-            this.guna2Button1.TabIndex = 22;
+            this.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPlay.BorderRadius = 2;
+            this.btnPlay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPlay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPlay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPlay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPlay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
+            this.btnPlay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.btnPlay.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.btnPlay.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.btnPlay.Image = global::Client.Properties.Resources.play;
+            this.btnPlay.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnPlay.Location = new System.Drawing.Point(292, 42);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
+            this.btnPlay.PressedDepth = 100;
+            this.btnPlay.Size = new System.Drawing.Size(29, 24);
+            this.btnPlay.TabIndex = 22;
+            this.btnPlay.Click += new System.EventHandler(this.Play);
             // 
             // guna2Button2
             // 
@@ -352,7 +354,7 @@
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
@@ -360,12 +362,13 @@
             this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
             this.guna2Button2.Image = global::Client.Properties.Resources.Sound;
             this.guna2Button2.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button2.Location = new System.Drawing.Point(336, 42);
+            this.guna2Button2.Location = new System.Drawing.Point(327, 46);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
             this.guna2Button2.PressedDepth = 100;
             this.guna2Button2.Size = new System.Drawing.Size(20, 20);
             this.guna2Button2.TabIndex = 22;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button3
             // 
@@ -375,7 +378,7 @@
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
@@ -383,12 +386,13 @@
             this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
             this.guna2Button3.Image = global::Client.Properties.Resources.Stop;
             this.guna2Button3.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button3.Location = new System.Drawing.Point(310, 42);
+            this.guna2Button3.Location = new System.Drawing.Point(266, 46);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
             this.guna2Button3.PressedDepth = 100;
             this.guna2Button3.Size = new System.Drawing.Size(20, 20);
             this.guna2Button3.TabIndex = 22;
+            this.guna2Button3.Click += new System.EventHandler(this.Stop);
             // 
             // guna2Panel2
             // 
@@ -429,27 +433,30 @@
             this.btnEdit.Text = "EDIT";
             this.btnEdit.Click += new System.EventHandler(this.Edit);
             // 
-            // label3
+            // lblcp
             // 
-            this.label3.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(31, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 19);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "06.00:00:00";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblcp.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcp.ForeColor = System.Drawing.Color.Black;
+            this.lblcp.Location = new System.Drawing.Point(31, 66);
+            this.lblcp.Name = "lblcp";
+            this.lblcp.Size = new System.Drawing.Size(79, 19);
+            this.lblcp.TabIndex = 20;
+            this.lblcp.Text = "06.00:00:00";
+            this.lblcp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // guna2TrackBar1
+            // vol
             // 
-            this.guna2TrackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TrackBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.guna2TrackBar1.Location = new System.Drawing.Point(347, 83);
-            this.guna2TrackBar1.Name = "guna2TrackBar1";
-            this.guna2TrackBar1.Size = new System.Drawing.Size(155, 23);
-            this.guna2TrackBar1.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
-            this.guna2TrackBar1.TabIndex = 24;
-            this.guna2TrackBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.vol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.vol.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.vol.Location = new System.Drawing.Point(347, 83);
+            this.vol.Name = "vol";
+            this.vol.Size = new System.Drawing.Size(155, 23);
+            this.vol.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
+            this.vol.TabIndex = 24;
+            this.vol.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
+            this.vol.Value = 100;
+            this.vol.ValueChanged += new System.EventHandler(this.vol_ValueChanged);
+            this.vol.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ChangeVolume);
             // 
             // label4
             // 
@@ -464,21 +471,48 @@
             this.label4.Text = "Volume";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // lblduration
+            // 
+            this.lblduration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblduration.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblduration.ForeColor = System.Drawing.Color.Black;
+            this.lblduration.Location = new System.Drawing.Point(510, 64);
+            this.lblduration.Name = "lblduration";
+            this.lblduration.Size = new System.Drawing.Size(79, 19);
+            this.lblduration.TabIndex = 20;
+            this.lblduration.Text = "06.00:00:00";
+            this.lblduration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblpos
+            // 
+            this.lblpos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblpos.AutoSize = true;
+            this.lblpos.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpos.ForeColor = System.Drawing.Color.Black;
+            this.lblpos.Location = new System.Drawing.Point(253, 10);
+            this.lblpos.Name = "lblpos";
+            this.lblpos.Size = new System.Drawing.Size(51, 19);
+            this.lblpos.TabIndex = 20;
+            this.lblpos.Text = "Volume";
+            this.lblpos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Container
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
-            this.Controls.Add(this.guna2TrackBar1);
+            this.Controls.Add(this.vol);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2ProgressBar1);
+            this.Controls.Add(this.btnPlay);
+            this.Controls.Add(this.seekBar);
+            this.Controls.Add(this.lblpos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblendTime);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblduration);
+            this.Controls.Add(this.lblcp);
             this.Controls.Add(this.lblstartTime);
             this.Controls.Add(this.lblheader);
             this.Controls.Add(this.panel4);
@@ -509,14 +543,16 @@
         public System.Windows.Forms.Label lblheader;
         public System.Windows.Forms.Label lblstartTime;
         public System.Windows.Forms.Label lblendTime;
-        private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ProgressBar seekBar;
+        private Guna.UI2.WinForms.Guna2Button btnPlay;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar1;
+        private System.Windows.Forms.Label lblcp;
+        private Guna.UI2.WinForms.Guna2TrackBar vol;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblduration;
+        private System.Windows.Forms.Label lblpos;
     }
 }

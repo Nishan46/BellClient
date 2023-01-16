@@ -17,6 +17,7 @@ using System.Diagnostics;
 using Client.BellData;
 using System.IO;
 using System.ComponentModel;
+using WMPLib;
 
 namespace Client
 {
@@ -56,6 +57,8 @@ namespace Client
         public static List<MorningData> MorningList = new List<MorningData>();
         public static string BaseDir = $@"{Application.StartupPath}\Client";
         public static bool hasToUpdate = false;
+        public static bool can_edit = true;
+        public static WindowsMediaPlayer player = new WindowsMediaPlayer();
 
         private static PrivateFontCollection fontCollection = new PrivateFontCollection();
         #region DLL_IMPORTS

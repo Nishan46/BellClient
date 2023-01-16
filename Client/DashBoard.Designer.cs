@@ -57,6 +57,7 @@
             this.Morning = new System.Windows.Forms.TabPage();
             this.morning_Panel1 = new Client.Morning_Panel();
             this.CustomUser = new System.Windows.Forms.TabPage();
+            this.loadpnl = new System.Windows.Forms.TabPage();
             this.Drager2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.drager3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -93,6 +94,7 @@
             // 
             this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -114,6 +116,7 @@
             // 
             this.guna2Button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -122,8 +125,7 @@
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
             this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
-            this.guna2Button5.Image = global::Client.Properties.Resources.minimize;
-            this.guna2Button5.ImageSize = new System.Drawing.Size(10, 10);
+            this.guna2Button5.Image = global::Client.Properties.Resources.maximize;
             this.guna2Button5.Location = new System.Drawing.Point(869, 0);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
@@ -135,6 +137,7 @@
             // 
             this.guna2Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -407,14 +410,15 @@
             this.PageContain.AllowTransitions = true;
             this.PageContain.Controls.Add(this.Morning);
             this.PageContain.Controls.Add(this.CustomUser);
+            this.PageContain.Controls.Add(this.loadpnl);
             this.PageContain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PageContain.Location = new System.Drawing.Point(0, 0);
             this.PageContain.Multiline = true;
             this.PageContain.Name = "PageContain";
-            this.PageContain.Page = this.CustomUser;
-            this.PageContain.PageIndex = 1;
-            this.PageContain.PageName = "CustomUser";
-            this.PageContain.PageTitle = "CustomUser";
+            this.PageContain.Page = this.Morning;
+            this.PageContain.PageIndex = 0;
+            this.PageContain.PageName = "Morning";
+            this.PageContain.PageTitle = "Morning";
             this.PageContain.SelectedIndex = 0;
             this.PageContain.Size = new System.Drawing.Size(775, 494);
             this.PageContain.TabIndex = 0;
@@ -466,6 +470,15 @@
             this.CustomUser.Size = new System.Drawing.Size(767, 468);
             this.CustomUser.TabIndex = 1;
             this.CustomUser.Text = "CustomUser";
+            // 
+            // loadpnl
+            // 
+            this.loadpnl.Location = new System.Drawing.Point(4, 4);
+            this.loadpnl.Name = "loadpnl";
+            this.loadpnl.Size = new System.Drawing.Size(767, 468);
+            this.loadpnl.TabIndex = 2;
+            this.loadpnl.Text = "Loader";
+            this.loadpnl.UseVisualStyleBackColor = true;
             // 
             // Drager2
             // 
@@ -554,5 +567,6 @@
         private Morning_Panel morning_Panel1;
         private Guna.UI2.WinForms.Guna2ImageButton btnAdd;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.TabPage loadpnl;
     }
 }
