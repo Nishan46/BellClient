@@ -55,13 +55,19 @@
             this.pnlcontainer = new System.Windows.Forms.Panel();
             this.PageContain = new Bunifu.UI.WinForms.BunifuPages();
             this.Morning = new System.Windows.Forms.TabPage();
-            this.morning_Panel1 = new Client.Morning_Panel();
+            this.pbl = new System.Windows.Forms.Panel();
+            this.pnldraw = new System.Windows.Forms.Panel();
+            this.loader = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.bltitle = new System.Windows.Forms.Label();
             this.CustomUser = new System.Windows.Forms.TabPage();
             this.loadpnl = new System.Windows.Forms.TabPage();
             this.Drager2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.drager3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.blank = new System.Windows.Forms.TabPage();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mrcLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediaLogo)).BeginInit();
@@ -71,6 +77,8 @@
             this.pnlcontainer.SuspendLayout();
             this.PageContain.SuspendLayout();
             this.Morning.SuspendLayout();
+            this.pbl.SuspendLayout();
+            this.loadpnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -411,6 +419,7 @@
             this.PageContain.Controls.Add(this.Morning);
             this.PageContain.Controls.Add(this.CustomUser);
             this.PageContain.Controls.Add(this.loadpnl);
+            this.PageContain.Controls.Add(this.blank);
             this.PageContain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PageContain.Location = new System.Drawing.Point(0, 0);
             this.PageContain.Multiline = true;
@@ -422,7 +431,7 @@
             this.PageContain.SelectedIndex = 0;
             this.PageContain.Size = new System.Drawing.Size(775, 494);
             this.PageContain.TabIndex = 0;
-            animation1.AnimateOnlyDifferences = false;
+            animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
             animation1.MaxTime = 1F;
@@ -430,7 +439,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -438,12 +447,13 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.PageContain.Transition = animation1;
-            this.PageContain.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            this.PageContain.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.VertBlind;
             // 
             // Morning
             // 
             this.Morning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.Morning.Controls.Add(this.morning_Panel1);
+            this.Morning.Controls.Add(this.pbl);
+            this.Morning.Controls.Add(this.bltitle);
             this.Morning.Location = new System.Drawing.Point(4, 4);
             this.Morning.Name = "Morning";
             this.Morning.Padding = new System.Windows.Forms.Padding(3);
@@ -451,15 +461,56 @@
             this.Morning.TabIndex = 0;
             this.Morning.Text = "Morning";
             // 
-            // morning_Panel1
+            // pbl
             // 
-            this.morning_Panel1.AutoScroll = true;
-            this.morning_Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.morning_Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.morning_Panel1.Location = new System.Drawing.Point(3, 3);
-            this.morning_Panel1.Name = "morning_Panel1";
-            this.morning_Panel1.Size = new System.Drawing.Size(761, 462);
-            this.morning_Panel1.TabIndex = 0;
+            this.pbl.Controls.Add(this.pnldraw);
+            this.pbl.Controls.Add(this.loader);
+            this.pbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbl.Location = new System.Drawing.Point(3, 71);
+            this.pbl.Name = "pbl";
+            this.pbl.Size = new System.Drawing.Size(761, 394);
+            this.pbl.TabIndex = 7;
+            // 
+            // pnldraw
+            // 
+            this.pnldraw.AutoScroll = true;
+            this.pnldraw.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnldraw.Location = new System.Drawing.Point(0, 0);
+            this.pnldraw.Name = "pnldraw";
+            this.pnldraw.Size = new System.Drawing.Size(761, 394);
+            this.pnldraw.TabIndex = 14;
+            // 
+            // loader
+            // 
+            this.loader.Animated = true;
+            this.loader.AnimationSpeed = 2F;
+            this.loader.BackColor = System.Drawing.Color.Transparent;
+            this.loader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.loader.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.loader.ForeColor = System.Drawing.Color.DimGray;
+            this.loader.Location = new System.Drawing.Point(300, 117);
+            this.loader.Minimum = 0;
+            this.loader.Name = "loader";
+            this.loader.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.loader.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.loader.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.loader.Size = new System.Drawing.Size(160, 160);
+            this.loader.TabIndex = 13;
+            this.loader.Value = 60;
+            this.loader.Visible = false;
+            // 
+            // bltitle
+            // 
+            this.bltitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bltitle.Font = new System.Drawing.Font("Poppins", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bltitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.bltitle.Location = new System.Drawing.Point(3, 3);
+            this.bltitle.Name = "bltitle";
+            this.bltitle.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.bltitle.Size = new System.Drawing.Size(761, 68);
+            this.bltitle.TabIndex = 6;
+            this.bltitle.Text = "MORNING TABLE";
+            this.bltitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // CustomUser
             // 
@@ -473,12 +524,14 @@
             // 
             // loadpnl
             // 
+            this.loadpnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.loadpnl.Controls.Add(this.label2);
+            this.loadpnl.Controls.Add(this.guna2CircleProgressBar1);
             this.loadpnl.Location = new System.Drawing.Point(4, 4);
             this.loadpnl.Name = "loadpnl";
             this.loadpnl.Size = new System.Drawing.Size(767, 468);
             this.loadpnl.TabIndex = 2;
             this.loadpnl.Text = "Loader";
-            this.loadpnl.UseVisualStyleBackColor = true;
             // 
             // Drager2
             // 
@@ -508,6 +561,47 @@
             this.Drager5.TargetControl = this.mrcLogo;
             this.Drager5.UseTransparentDrag = true;
             // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label2.Font = new System.Drawing.Font("Poppins", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.label2.Location = new System.Drawing.Point(0, 290);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(767, 178);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Updating\r\nPlease Wait !";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // guna2CircleProgressBar1
+            // 
+            this.guna2CircleProgressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2CircleProgressBar1.Animated = true;
+            this.guna2CircleProgressBar1.AnimationSpeed = 2F;
+            this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.DimGray;
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(327, 135);
+            this.guna2CircleProgressBar1.Minimum = 0;
+            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
+            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(140, 140);
+            this.guna2CircleProgressBar1.TabIndex = 15;
+            this.guna2CircleProgressBar1.Value = 60;
+            // 
+            // blank
+            // 
+            this.blank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.blank.Location = new System.Drawing.Point(4, 4);
+            this.blank.Name = "blank";
+            this.blank.Size = new System.Drawing.Size(767, 468);
+            this.blank.TabIndex = 3;
+            this.blank.Text = "blank";
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,6 +615,7 @@
             this.Name = "DashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoard";
+            this.Load += new System.EventHandler(this.Loading);
             this.Move += new System.EventHandler(this.showNormal_Dash);
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mrcLogo)).EndInit();
@@ -532,6 +627,8 @@
             this.pnlcontainer.ResumeLayout(false);
             this.PageContain.ResumeLayout(false);
             this.Morning.ResumeLayout(false);
+            this.pbl.ResumeLayout(false);
+            this.loadpnl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -564,9 +661,15 @@
         private Bunifu.UI.WinForms.BunifuPages PageContain;
         private System.Windows.Forms.TabPage Morning;
         private System.Windows.Forms.TabPage CustomUser;
-        private Morning_Panel morning_Panel1;
         private Guna.UI2.WinForms.Guna2ImageButton btnAdd;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.TabPage loadpnl;
+        private System.Windows.Forms.Label bltitle;
+        private System.Windows.Forms.Panel pbl;
+        private System.Windows.Forms.Panel pnldraw;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar loader;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
+        private System.Windows.Forms.TabPage blank;
     }
 }

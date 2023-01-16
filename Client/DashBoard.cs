@@ -6,6 +6,9 @@ using System.Diagnostics;
 using System.Threading;
 using Guna.UI2.WinForms;
 using WMPLib;
+using System.IO;
+using Client.BellData;
+using System.Threading.Tasks;
 
 namespace Client
 {
@@ -15,6 +18,17 @@ namespace Client
         {
             InitializeComponent();
             btnMorning.PerformClick();
+            PageContain.SetPage(blank);
+            if (File.Exists($@"{Core.BaseDir}\Db\Morning.Db.json"))
+            {
+                Core.MorningList = Core.TotheMorning($@"{Core.BaseDir}\Db\Morning.Db.json");
+            }
+
+
+            System.Windows.Forms.Timer Updates = new System.Windows.Forms.Timer();
+            Updates.Enabled = true;
+            Updates.Interval = 1000;
+            Updates.Tick += Updates_Tick;
             Thread ShutdownThread = new Thread(() =>
             {
                 while (true)
@@ -90,6 +104,49 @@ namespace Client
         }
 
         private bool is_minimized = false;
+
+        private void setLoad()
+        {
+            Thread loadingThread = new Thread(() =>
+            {
+                Thread.Sleep(4000);
+                Action action = new Action(() => { PageContain.SetPage(Morning); });
+                BeginInvoke(action);
+            });
+            loadingThread.Start();
+            PageContain.SetPage(loadpnl);
+        }
+        private void Updates_Tick(object sender, EventArgs e)
+        {
+            if (Core.hasToUpdate)
+            {
+
+                setLoad();
+
+                pnldraw.Controls.Clear();
+                for (int i = Core.MorningList.Count - 1; i >= 0; i--)
+                {
+                    MorningData morningData = Core.MorningList[i];
+                    Controls.Container container = new Controls.Container();
+                    container.lblheader.Text = morningData.Name;
+                    container.lblstartTime.Text = morningData.StartTime.ToLongTimeString();
+                    container.lblendTime.Text = morningData.EndTime.ToLongTimeString();
+                    container.Monday.Checked = morningData.Monday;
+                    container.Tuesday.Checked = morningData.Tuesday;
+                    container.Wednesday.Checked = morningData.Wednesday;
+                    container.Thursday.Checked = morningData.Thursday;
+                    container.Friday.Checked = morningData.Friday;
+                    container.Saturday.Checked = morningData.Saturday;
+                    container.Sunday.Checked = morningData.Sunday;
+                    container.lastChecked = morningData.LastUpdated;
+                    container.path = morningData.Path;
+                    container.Dock = DockStyle.Top;
+                    pnldraw.Controls.Add(container);
+                }
+                Core.hasToUpdate = false;
+            }
+
+        }
         private void checkConnection()
         {
             Thread Connected = new Thread(() =>
@@ -221,6 +278,31 @@ namespace Client
             {
 
                 WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void Loading(object sender, EventArgs e)
+        {
+            setLoad();
+            pnldraw.Controls.Clear();
+            for (int i = Core.MorningList.Count - 1; i >= 0; i--)
+            {
+                MorningData morningData = Core.MorningList[i];
+                Controls.Container container = new Controls.Container();
+                container.lblheader.Text = morningData.Name;
+                container.lblstartTime.Text = morningData.StartTime.ToLongTimeString();
+                container.lblendTime.Text = morningData.EndTime.ToLongTimeString();
+                container.Monday.Checked = morningData.Monday;
+                container.Tuesday.Checked = morningData.Tuesday;
+                container.Wednesday.Checked = morningData.Wednesday;
+                container.Thursday.Checked = morningData.Thursday;
+                container.Friday.Checked = morningData.Friday;
+                container.Saturday.Checked = morningData.Saturday;
+                container.Sunday.Checked = morningData.Sunday;
+                container.lastChecked = morningData.LastUpdated;
+                container.path = morningData.Path;
+                container.Dock = DockStyle.Top;
+                pnldraw.Controls.Add(container);
             }
         }
     }

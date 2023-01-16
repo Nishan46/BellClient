@@ -20,16 +20,7 @@ namespace Client
         {
             InitializeComponent();
             
-            if (File.Exists($@"{Core.BaseDir}\Db\Morning.Db.json"))
-            {
-                Core.MorningList = Core.TotheMorning($@"{Core.BaseDir}\Db\Morning.Db.json");
-            }
-
-
-            System.Windows.Forms.Timer Updates = new System.Windows.Forms.Timer();
-            Updates.Enabled = true;
-            Updates.Interval = 1000;
-            Updates.Tick += Updates_Tick;
+           
         }
 
         private void Updates_Tick(object sender, EventArgs e)

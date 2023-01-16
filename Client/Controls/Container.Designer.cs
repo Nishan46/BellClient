@@ -52,7 +52,6 @@
             this.vol = new Guna.UI2.WinForms.Guna2TrackBar();
             this.label4 = new System.Windows.Forms.Label();
             this.lblduration = new System.Windows.Forms.Label();
-            this.lblpos = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -291,7 +290,7 @@
             this.lblstartTime.ForeColor = System.Drawing.Color.Black;
             this.lblstartTime.Location = new System.Drawing.Point(31, 111);
             this.lblstartTime.Name = "lblstartTime";
-            this.lblstartTime.Size = new System.Drawing.Size(98, 27);
+            this.lblstartTime.Size = new System.Drawing.Size(98, 20);
             this.lblstartTime.TabIndex = 20;
             this.lblstartTime.Text = "START : 06.00 AM";
             // 
@@ -483,19 +482,6 @@
             this.lblduration.Text = "06.00:00:00";
             this.lblduration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblpos
-            // 
-            this.lblpos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblpos.AutoSize = true;
-            this.lblpos.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpos.ForeColor = System.Drawing.Color.Black;
-            this.lblpos.Location = new System.Drawing.Point(253, 10);
-            this.lblpos.Name = "lblpos";
-            this.lblpos.Size = new System.Drawing.Size(51, 19);
-            this.lblpos.TabIndex = 20;
-            this.lblpos.Text = "Volume";
-            this.lblpos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Container
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,7 +494,6 @@
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.seekBar);
-            this.Controls.Add(this.lblpos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblendTime);
             this.Controls.Add(this.lblduration);
@@ -553,6 +538,5 @@
         private Guna.UI2.WinForms.Guna2TrackBar vol;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblduration;
-        private System.Windows.Forms.Label lblpos;
     }
 }
