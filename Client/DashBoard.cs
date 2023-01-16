@@ -110,7 +110,7 @@ namespace Client
             Thread loadingThread = new Thread(() =>
             {
                 Thread.Sleep(4000);
-                Action action = new Action(() => { PageContain.SetPage(Morning); });
+                Action action = new Action(() => {PageContain.SetPage(Morning); });
                 BeginInvoke(action);
             });
             loadingThread.Start();
@@ -131,13 +131,13 @@ namespace Client
                     container.lblheader.Text = morningData.Name;
                     container.lblstartTime.Text = morningData.StartTime.ToLongTimeString();
                     container.lblendTime.Text = morningData.EndTime.ToLongTimeString();
-                    container.Monday.Checked = morningData.Monday;
-                    container.Tuesday.Checked = morningData.Tuesday;
-                    container.Wednesday.Checked = morningData.Wednesday;
-                    container.Thursday.Checked = morningData.Thursday;
-                    container.Friday.Checked = morningData.Friday;
-                    container.Saturday.Checked = morningData.Saturday;
-                    container.Sunday.Checked = morningData.Sunday;
+                    container.Monday= morningData.Monday;
+                    container.Tuesday = morningData.Tuesday;
+                    container.Wednesday = morningData.Wednesday;
+                    container.Thursday = morningData.Thursday;
+                    container.Friday = morningData.Friday;
+                    container.Saturday = morningData.Saturday;
+                    container.Sunday = morningData.Sunday;
                     container.lastChecked = morningData.LastUpdated;
                     container.path = morningData.Path;
                     container.Dock = DockStyle.Top;
@@ -267,20 +267,6 @@ namespace Client
             
         }
 
-        private void Maximize_Dash(object sender, EventArgs e)
-        {
-            if(WindowState == FormWindowState.Normal)
-            {
-
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-
-                WindowState = FormWindowState.Normal;
-            }
-        }
-
         private void Loading(object sender, EventArgs e)
         {
             setLoad();
@@ -292,13 +278,13 @@ namespace Client
                 container.lblheader.Text = morningData.Name;
                 container.lblstartTime.Text = morningData.StartTime.ToLongTimeString();
                 container.lblendTime.Text = morningData.EndTime.ToLongTimeString();
-                container.Monday.Checked = morningData.Monday;
-                container.Tuesday.Checked = morningData.Tuesday;
-                container.Wednesday.Checked = morningData.Wednesday;
-                container.Thursday.Checked = morningData.Thursday;
-                container.Friday.Checked = morningData.Friday;
-                container.Saturday.Checked = morningData.Saturday;
-                container.Sunday.Checked = morningData.Sunday;
+                container.Monday = morningData.Monday;
+                container.Tuesday = morningData.Tuesday;
+                container.Wednesday = morningData.Wednesday;
+                container.Thursday = morningData.Thursday;
+                container.Friday = morningData.Friday;
+                container.Saturday = morningData.Saturday;
+                container.Sunday= morningData.Sunday;
                 container.lastChecked = morningData.LastUpdated;
                 container.path = morningData.Path;
                 container.Dock = DockStyle.Top;

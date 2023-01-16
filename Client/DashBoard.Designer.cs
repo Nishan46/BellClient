@@ -33,7 +33,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.lblheader = new System.Windows.Forms.Label();
             this.mrcLogo = new System.Windows.Forms.PictureBox();
@@ -61,13 +60,13 @@
             this.bltitle = new System.Windows.Forms.Label();
             this.CustomUser = new System.Windows.Forms.TabPage();
             this.loadpnl = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.blank = new System.Windows.Forms.TabPage();
             this.Drager2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.drager3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drager5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.blank = new System.Windows.Forms.TabPage();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mrcLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mediaLogo)).BeginInit();
@@ -85,7 +84,6 @@
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
             this.pnlHeader.Controls.Add(this.guna2Button1);
-            this.pnlHeader.Controls.Add(this.guna2Button5);
             this.pnlHeader.Controls.Add(this.guna2Button4);
             this.pnlHeader.Controls.Add(this.lblheader);
             this.pnlHeader.Controls.Add(this.mrcLogo);
@@ -113,33 +111,12 @@
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.guna2Button1.Image = global::Client.Properties.Resources.minimize;
             this.guna2Button1.ImageSize = new System.Drawing.Size(10, 10);
-            this.guna2Button1.Location = new System.Drawing.Point(816, 0);
+            this.guna2Button1.Location = new System.Drawing.Point(870, 0);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
             this.guna2Button1.Size = new System.Drawing.Size(50, 50);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Click += new System.EventHandler(this.Minimize_Dash);
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2Button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
-            this.guna2Button5.Image = global::Client.Properties.Resources.maximize;
-            this.guna2Button5.Location = new System.Drawing.Point(869, 0);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button5.Size = new System.Drawing.Size(50, 50);
-            this.guna2Button5.TabIndex = 0;
-            this.guna2Button5.Click += new System.EventHandler(this.Maximize_Dash);
             // 
             // guna2Button4
             // 
@@ -447,7 +424,7 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.PageContain.Transition = animation1;
-            this.PageContain.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.VertBlind;
+            this.PageContain.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Scale;
             // 
             // Morning
             // 
@@ -463,8 +440,8 @@
             // 
             // pbl
             // 
-            this.pbl.Controls.Add(this.pnldraw);
             this.pbl.Controls.Add(this.loader);
+            this.pbl.Controls.Add(this.pnldraw);
             this.pbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbl.Location = new System.Drawing.Point(3, 71);
             this.pbl.Name = "pbl";
@@ -533,34 +510,6 @@
             this.loadpnl.TabIndex = 2;
             this.loadpnl.Text = "Loader";
             // 
-            // Drager2
-            // 
-            this.Drager2.DockIndicatorTransparencyValue = 0.6D;
-            this.Drager2.DragStartTransparencyValue = 1D;
-            this.Drager2.TargetControl = this.lblheader;
-            this.Drager2.UseTransparentDrag = true;
-            // 
-            // drager3
-            // 
-            this.drager3.DockIndicatorTransparencyValue = 0.6D;
-            this.drager3.DragStartTransparencyValue = 1D;
-            this.drager3.TargetControl = this.lblmail;
-            this.drager3.UseTransparentDrag = true;
-            // 
-            // Drager4
-            // 
-            this.Drager4.DockIndicatorTransparencyValue = 0.6D;
-            this.Drager4.DragStartTransparencyValue = 1D;
-            this.Drager4.TargetControl = this.mediaLogo;
-            this.Drager4.UseTransparentDrag = true;
-            // 
-            // Drager5
-            // 
-            this.Drager5.DockIndicatorTransparencyValue = 0.6D;
-            this.Drager5.DragStartTransparencyValue = 1D;
-            this.Drager5.TargetControl = this.mrcLogo;
-            this.Drager5.UseTransparentDrag = true;
-            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -601,6 +550,34 @@
             this.blank.Size = new System.Drawing.Size(767, 468);
             this.blank.TabIndex = 3;
             this.blank.Text = "blank";
+            // 
+            // Drager2
+            // 
+            this.Drager2.DockIndicatorTransparencyValue = 0.6D;
+            this.Drager2.DragStartTransparencyValue = 1D;
+            this.Drager2.TargetControl = this.lblheader;
+            this.Drager2.UseTransparentDrag = true;
+            // 
+            // drager3
+            // 
+            this.drager3.DockIndicatorTransparencyValue = 0.6D;
+            this.drager3.DragStartTransparencyValue = 1D;
+            this.drager3.TargetControl = this.lblmail;
+            this.drager3.UseTransparentDrag = true;
+            // 
+            // Drager4
+            // 
+            this.Drager4.DockIndicatorTransparencyValue = 0.6D;
+            this.Drager4.DragStartTransparencyValue = 1D;
+            this.Drager4.TargetControl = this.mediaLogo;
+            this.Drager4.UseTransparentDrag = true;
+            // 
+            // Drager5
+            // 
+            this.Drager5.DockIndicatorTransparencyValue = 0.6D;
+            this.Drager5.DragStartTransparencyValue = 1D;
+            this.Drager5.TargetControl = this.mrcLogo;
+            this.Drager5.UseTransparentDrag = true;
             // 
             // DashBoard
             // 
@@ -652,7 +629,6 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Panel pnlcontainer;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2DragControl Drager2;
         private Guna.UI2.WinForms.Guna2DragControl drager3;
         private Guna.UI2.WinForms.Guna2DragControl Drager4;

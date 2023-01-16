@@ -30,28 +30,29 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Sunday = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.Saturday = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.Friday = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.Thursday = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.Wednesday = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.Tuesday = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.Monday = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CSunday = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CSaturday = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CFriday = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CThursday = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CWednesday = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CTuesday = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.CMonday = new Guna.UI2.WinForms.Guna2CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblheader = new System.Windows.Forms.Label();
             this.lblstartTime = new System.Windows.Forms.Label();
             this.lblendTime = new System.Windows.Forms.Label();
             this.seekBar = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.btnPlay = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.lblcp = new System.Windows.Forms.Label();
             this.vol = new Guna.UI2.WinForms.Guna2TrackBar();
             this.label4 = new System.Windows.Forms.Label();
             this.lblduration = new System.Windows.Forms.Label();
+            this.lblvol = new System.Windows.Forms.Label();
+            this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,13 +68,13 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
-            this.guna2Panel1.Controls.Add(this.Sunday);
-            this.guna2Panel1.Controls.Add(this.Saturday);
-            this.guna2Panel1.Controls.Add(this.Friday);
-            this.guna2Panel1.Controls.Add(this.Thursday);
-            this.guna2Panel1.Controls.Add(this.Wednesday);
-            this.guna2Panel1.Controls.Add(this.Tuesday);
-            this.guna2Panel1.Controls.Add(this.Monday);
+            this.guna2Panel1.Controls.Add(this.CSunday);
+            this.guna2Panel1.Controls.Add(this.CSaturday);
+            this.guna2Panel1.Controls.Add(this.CFriday);
+            this.guna2Panel1.Controls.Add(this.CThursday);
+            this.guna2Panel1.Controls.Add(this.CWednesday);
+            this.guna2Panel1.Controls.Add(this.CTuesday);
+            this.guna2Panel1.Controls.Add(this.CMonday);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
             this.guna2Panel1.Location = new System.Drawing.Point(31, 131);
@@ -81,180 +82,187 @@
             this.guna2Panel1.Size = new System.Drawing.Size(568, 45);
             this.guna2Panel1.TabIndex = 15;
             // 
-            // Sunday
+            // CSunday
             // 
-            this.Sunday.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Sunday.AutoSize = true;
-            this.Sunday.BackColor = System.Drawing.Color.Transparent;
-            this.Sunday.Checked = true;
-            this.Sunday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
-            this.Sunday.CheckedState.BorderRadius = 0;
-            this.Sunday.CheckedState.BorderThickness = 0;
-            this.Sunday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
-            this.Sunday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Sunday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Sunday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sunday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Sunday.Location = new System.Drawing.Point(483, 14);
-            this.Sunday.Name = "Sunday";
-            this.Sunday.Size = new System.Drawing.Size(65, 20);
-            this.Sunday.TabIndex = 14;
-            this.Sunday.Text = "Sunday";
-            this.Sunday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Sunday.UncheckedState.BorderRadius = 0;
-            this.Sunday.UncheckedState.BorderThickness = 0;
-            this.Sunday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Sunday.UseVisualStyleBackColor = false;
+            this.CSunday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CSunday.AutoSize = true;
+            this.CSunday.BackColor = System.Drawing.Color.Transparent;
+            this.CSunday.Checked = true;
+            this.CSunday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
+            this.CSunday.CheckedState.BorderRadius = 0;
+            this.CSunday.CheckedState.BorderThickness = 0;
+            this.CSunday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
+            this.CSunday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CSunday.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CSunday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CSunday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.CSunday.Location = new System.Drawing.Point(483, 14);
+            this.CSunday.Name = "CSunday";
+            this.CSunday.Size = new System.Drawing.Size(65, 20);
+            this.CSunday.TabIndex = 14;
+            this.CSunday.Text = "Sunday";
+            this.CSunday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CSunday.UncheckedState.BorderRadius = 0;
+            this.CSunday.UncheckedState.BorderThickness = 0;
+            this.CSunday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CSunday.UseVisualStyleBackColor = false;
+            this.CSunday.CheckedChanged += new System.EventHandler(this.NoChange);
             // 
-            // Saturday
+            // CSaturday
             // 
-            this.Saturday.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Saturday.AutoSize = true;
-            this.Saturday.BackColor = System.Drawing.Color.Transparent;
-            this.Saturday.Checked = true;
-            this.Saturday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
-            this.Saturday.CheckedState.BorderRadius = 0;
-            this.Saturday.CheckedState.BorderThickness = 0;
-            this.Saturday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
-            this.Saturday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Saturday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Saturday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Saturday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Saturday.Location = new System.Drawing.Point(404, 14);
-            this.Saturday.Name = "Saturday";
-            this.Saturday.Size = new System.Drawing.Size(73, 20);
-            this.Saturday.TabIndex = 15;
-            this.Saturday.Text = "Saturday";
-            this.Saturday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Saturday.UncheckedState.BorderRadius = 0;
-            this.Saturday.UncheckedState.BorderThickness = 0;
-            this.Saturday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Saturday.UseVisualStyleBackColor = false;
+            this.CSaturday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CSaturday.AutoSize = true;
+            this.CSaturday.BackColor = System.Drawing.Color.Transparent;
+            this.CSaturday.Checked = true;
+            this.CSaturday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
+            this.CSaturday.CheckedState.BorderRadius = 0;
+            this.CSaturday.CheckedState.BorderThickness = 0;
+            this.CSaturday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
+            this.CSaturday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CSaturday.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CSaturday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CSaturday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.CSaturday.Location = new System.Drawing.Point(404, 14);
+            this.CSaturday.Name = "CSaturday";
+            this.CSaturday.Size = new System.Drawing.Size(73, 20);
+            this.CSaturday.TabIndex = 15;
+            this.CSaturday.Text = "Saturday";
+            this.CSaturday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CSaturday.UncheckedState.BorderRadius = 0;
+            this.CSaturday.UncheckedState.BorderThickness = 0;
+            this.CSaturday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CSaturday.UseVisualStyleBackColor = false;
+            this.CSaturday.CheckedChanged += new System.EventHandler(this.NoChange);
             // 
-            // Friday
+            // CFriday
             // 
-            this.Friday.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Friday.AutoSize = true;
-            this.Friday.BackColor = System.Drawing.Color.Transparent;
-            this.Friday.Checked = true;
-            this.Friday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Friday.CheckedState.BorderRadius = 0;
-            this.Friday.CheckedState.BorderThickness = 0;
-            this.Friday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Friday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Friday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Friday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Friday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Friday.Location = new System.Drawing.Point(341, 14);
-            this.Friday.Name = "Friday";
-            this.Friday.Size = new System.Drawing.Size(57, 20);
-            this.Friday.TabIndex = 16;
-            this.Friday.Text = "Friday";
-            this.Friday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Friday.UncheckedState.BorderRadius = 0;
-            this.Friday.UncheckedState.BorderThickness = 0;
-            this.Friday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Friday.UseVisualStyleBackColor = false;
+            this.CFriday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CFriday.AutoSize = true;
+            this.CFriday.BackColor = System.Drawing.Color.Transparent;
+            this.CFriday.Checked = true;
+            this.CFriday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CFriday.CheckedState.BorderRadius = 0;
+            this.CFriday.CheckedState.BorderThickness = 0;
+            this.CFriday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CFriday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CFriday.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CFriday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CFriday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.CFriday.Location = new System.Drawing.Point(341, 14);
+            this.CFriday.Name = "CFriday";
+            this.CFriday.Size = new System.Drawing.Size(57, 20);
+            this.CFriday.TabIndex = 16;
+            this.CFriday.Text = "Friday";
+            this.CFriday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CFriday.UncheckedState.BorderRadius = 0;
+            this.CFriday.UncheckedState.BorderThickness = 0;
+            this.CFriday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CFriday.UseVisualStyleBackColor = false;
+            this.CFriday.CheckedChanged += new System.EventHandler(this.NoChange);
             // 
-            // Thursday
+            // CThursday
             // 
-            this.Thursday.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Thursday.AutoSize = true;
-            this.Thursday.BackColor = System.Drawing.Color.Transparent;
-            this.Thursday.Checked = true;
-            this.Thursday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Thursday.CheckedState.BorderRadius = 0;
-            this.Thursday.CheckedState.BorderThickness = 0;
-            this.Thursday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Thursday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Thursday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Thursday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thursday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Thursday.Location = new System.Drawing.Point(261, 14);
-            this.Thursday.Name = "Thursday";
-            this.Thursday.Size = new System.Drawing.Size(74, 20);
-            this.Thursday.TabIndex = 17;
-            this.Thursday.Text = "Thursday";
-            this.Thursday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Thursday.UncheckedState.BorderRadius = 0;
-            this.Thursday.UncheckedState.BorderThickness = 0;
-            this.Thursday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Thursday.UseVisualStyleBackColor = false;
+            this.CThursday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CThursday.AutoSize = true;
+            this.CThursday.BackColor = System.Drawing.Color.Transparent;
+            this.CThursday.Checked = true;
+            this.CThursday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CThursday.CheckedState.BorderRadius = 0;
+            this.CThursday.CheckedState.BorderThickness = 0;
+            this.CThursday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CThursday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CThursday.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CThursday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CThursday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.CThursday.Location = new System.Drawing.Point(261, 14);
+            this.CThursday.Name = "CThursday";
+            this.CThursday.Size = new System.Drawing.Size(74, 20);
+            this.CThursday.TabIndex = 17;
+            this.CThursday.Text = "Thursday";
+            this.CThursday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CThursday.UncheckedState.BorderRadius = 0;
+            this.CThursday.UncheckedState.BorderThickness = 0;
+            this.CThursday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CThursday.UseVisualStyleBackColor = false;
+            this.CThursday.CheckedChanged += new System.EventHandler(this.NoChange);
             // 
-            // Wednesday
+            // CWednesday
             // 
-            this.Wednesday.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Wednesday.AutoSize = true;
-            this.Wednesday.BackColor = System.Drawing.Color.Transparent;
-            this.Wednesday.Checked = true;
-            this.Wednesday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Wednesday.CheckedState.BorderRadius = 0;
-            this.Wednesday.CheckedState.BorderThickness = 0;
-            this.Wednesday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Wednesday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Wednesday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Wednesday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Wednesday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Wednesday.Location = new System.Drawing.Point(169, 14);
-            this.Wednesday.Name = "Wednesday";
-            this.Wednesday.Size = new System.Drawing.Size(86, 20);
-            this.Wednesday.TabIndex = 18;
-            this.Wednesday.Text = "Wednesday";
-            this.Wednesday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Wednesday.UncheckedState.BorderRadius = 0;
-            this.Wednesday.UncheckedState.BorderThickness = 0;
-            this.Wednesday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Wednesday.UseVisualStyleBackColor = false;
+            this.CWednesday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CWednesday.AutoSize = true;
+            this.CWednesday.BackColor = System.Drawing.Color.Transparent;
+            this.CWednesday.Checked = true;
+            this.CWednesday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CWednesday.CheckedState.BorderRadius = 0;
+            this.CWednesday.CheckedState.BorderThickness = 0;
+            this.CWednesday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CWednesday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CWednesday.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CWednesday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CWednesday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.CWednesday.Location = new System.Drawing.Point(169, 14);
+            this.CWednesday.Name = "CWednesday";
+            this.CWednesday.Size = new System.Drawing.Size(86, 20);
+            this.CWednesday.TabIndex = 18;
+            this.CWednesday.Text = "Wednesday";
+            this.CWednesday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CWednesday.UncheckedState.BorderRadius = 0;
+            this.CWednesday.UncheckedState.BorderThickness = 0;
+            this.CWednesday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CWednesday.UseVisualStyleBackColor = false;
+            this.CWednesday.CheckedChanged += new System.EventHandler(this.NoChange);
             // 
-            // Tuesday
+            // CTuesday
             // 
-            this.Tuesday.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Tuesday.AutoSize = true;
-            this.Tuesday.BackColor = System.Drawing.Color.Transparent;
-            this.Tuesday.Checked = true;
-            this.Tuesday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Tuesday.CheckedState.BorderRadius = 0;
-            this.Tuesday.CheckedState.BorderThickness = 0;
-            this.Tuesday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Tuesday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Tuesday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Tuesday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tuesday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Tuesday.Location = new System.Drawing.Point(94, 14);
-            this.Tuesday.Name = "Tuesday";
-            this.Tuesday.Size = new System.Drawing.Size(69, 20);
-            this.Tuesday.TabIndex = 19;
-            this.Tuesday.Text = "Tuesday";
-            this.Tuesday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Tuesday.UncheckedState.BorderRadius = 0;
-            this.Tuesday.UncheckedState.BorderThickness = 0;
-            this.Tuesday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Tuesday.UseVisualStyleBackColor = false;
+            this.CTuesday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CTuesday.AutoSize = true;
+            this.CTuesday.BackColor = System.Drawing.Color.Transparent;
+            this.CTuesday.Checked = true;
+            this.CTuesday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CTuesday.CheckedState.BorderRadius = 0;
+            this.CTuesday.CheckedState.BorderThickness = 0;
+            this.CTuesday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CTuesday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CTuesday.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CTuesday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CTuesday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.CTuesday.Location = new System.Drawing.Point(94, 14);
+            this.CTuesday.Name = "CTuesday";
+            this.CTuesday.Size = new System.Drawing.Size(69, 20);
+            this.CTuesday.TabIndex = 19;
+            this.CTuesday.Text = "Tuesday";
+            this.CTuesday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CTuesday.UncheckedState.BorderRadius = 0;
+            this.CTuesday.UncheckedState.BorderThickness = 0;
+            this.CTuesday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CTuesday.UseVisualStyleBackColor = false;
+            this.CTuesday.CheckedChanged += new System.EventHandler(this.NoChange);
             // 
-            // Monday
+            // CMonday
             // 
-            this.Monday.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Monday.AutoSize = true;
-            this.Monday.BackColor = System.Drawing.Color.Transparent;
-            this.Monday.Checked = true;
-            this.Monday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Monday.CheckedState.BorderRadius = 0;
-            this.Monday.CheckedState.BorderThickness = 0;
-            this.Monday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.Monday.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Monday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Monday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Monday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
-            this.Monday.Location = new System.Drawing.Point(17, 14);
-            this.Monday.Name = "Monday";
-            this.Monday.Size = new System.Drawing.Size(71, 20);
-            this.Monday.TabIndex = 20;
-            this.Monday.Text = " Monday";
-            this.Monday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Monday.UncheckedState.BorderRadius = 0;
-            this.Monday.UncheckedState.BorderThickness = 0;
-            this.Monday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Monday.UseVisualStyleBackColor = false;
+            this.CMonday.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CMonday.AutoSize = true;
+            this.CMonday.BackColor = System.Drawing.Color.Transparent;
+            this.CMonday.Checked = true;
+            this.CMonday.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CMonday.CheckedState.BorderRadius = 0;
+            this.CMonday.CheckedState.BorderThickness = 0;
+            this.CMonday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
+            this.CMonday.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CMonday.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CMonday.Font = new System.Drawing.Font("Raleway", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMonday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(182)))), ((int)(((byte)(186)))));
+            this.CMonday.Location = new System.Drawing.Point(17, 14);
+            this.CMonday.Name = "CMonday";
+            this.CMonday.Size = new System.Drawing.Size(71, 20);
+            this.CMonday.TabIndex = 20;
+            this.CMonday.Text = " Monday";
+            this.CMonday.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CMonday.UncheckedState.BorderRadius = 0;
+            this.CMonday.UncheckedState.BorderThickness = 0;
+            this.CMonday.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.CMonday.UseVisualStyleBackColor = false;
+            this.CMonday.CheckedChanged += new System.EventHandler(this.NoChange);
             // 
             // panel3
             // 
@@ -321,78 +329,6 @@
             this.seekBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.seekBar.Value = 100;
             // 
-            // btnPlay
-            // 
-            this.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPlay.BorderRadius = 2;
-            this.btnPlay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPlay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPlay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPlay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPlay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
-            this.btnPlay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.btnPlay.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.btnPlay.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.btnPlay.Image = global::Client.Properties.Resources.play;
-            this.btnPlay.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnPlay.Location = new System.Drawing.Point(292, 42);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
-            this.btnPlay.PressedDepth = 100;
-            this.btnPlay.Size = new System.Drawing.Size(29, 24);
-            this.btnPlay.TabIndex = 22;
-            this.btnPlay.Click += new System.EventHandler(this.Play);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button2.BorderRadius = 2;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button2.Image = global::Client.Properties.Resources.Sound;
-            this.guna2Button2.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button2.Location = new System.Drawing.Point(327, 46);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
-            this.guna2Button2.PressedDepth = 100;
-            this.guna2Button2.Size = new System.Drawing.Size(20, 20);
-            this.guna2Button2.TabIndex = 22;
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button3.BorderRadius = 2;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(23)))), ((int)(((byte)(22)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
-            this.guna2Button3.Image = global::Client.Properties.Resources.Stop;
-            this.guna2Button3.ImageSize = new System.Drawing.Size(15, 15);
-            this.guna2Button3.Location = new System.Drawing.Point(266, 46);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(161)))), ((int)(((byte)(62)))));
-            this.guna2Button3.PressedDepth = 100;
-            this.guna2Button3.Size = new System.Drawing.Size(20, 20);
-            this.guna2Button3.TabIndex = 22;
-            this.guna2Button3.Click += new System.EventHandler(this.Stop);
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -411,10 +347,10 @@
             this.btnEdit.CustomizableEdges.BottomRight = false;
             this.btnEdit.CustomizableEdges.TopLeft = false;
             this.btnEdit.CustomizableEdges.TopRight = false;
-            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.btnEdit.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
             this.btnEdit.Font = new System.Drawing.Font("Poppins Medium", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -440,16 +376,16 @@
             this.lblcp.Name = "lblcp";
             this.lblcp.Size = new System.Drawing.Size(79, 19);
             this.lblcp.TabIndex = 20;
-            this.lblcp.Text = "06.00:00:00";
+            this.lblcp.Text = "00.00";
             this.lblcp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // vol
             // 
             this.vol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.vol.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.vol.Location = new System.Drawing.Point(347, 83);
+            this.vol.Location = new System.Drawing.Point(451, 83);
             this.vol.Name = "vol";
-            this.vol.Size = new System.Drawing.Size(155, 23);
+            this.vol.Size = new System.Drawing.Size(51, 23);
             this.vol.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
             this.vol.TabIndex = 24;
             this.vol.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
@@ -463,7 +399,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(290, 86);
+            this.label4.Location = new System.Drawing.Point(399, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 19);
             this.label4.TabIndex = 20;
@@ -479,21 +415,85 @@
             this.lblduration.Name = "lblduration";
             this.lblduration.Size = new System.Drawing.Size(79, 19);
             this.lblduration.TabIndex = 20;
-            this.lblduration.Text = "06.00:00:00";
+            this.lblduration.Text = "00.00";
             this.lblduration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblvol
+            // 
+            this.lblvol.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblvol.AutoSize = true;
+            this.lblvol.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvol.ForeColor = System.Drawing.Color.Black;
+            this.lblvol.Location = new System.Drawing.Point(499, 88);
+            this.lblvol.Name = "lblvol";
+            this.lblvol.Size = new System.Drawing.Size(35, 19);
+            this.lblvol.TabIndex = 20;
+            this.lblvol.Text = "100%";
+            this.lblvol.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPlay.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlay.HoverState.ImageSize = new System.Drawing.Size(26, 26);
+            this.btnPlay.Image = global::Client.Properties.Resources.BlackPlay;
+            this.btnPlay.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnPlay.ImageRotate = 0F;
+            this.btnPlay.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnPlay.Location = new System.Drawing.Point(272, 45);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnPlay.Size = new System.Drawing.Size(20, 20);
+            this.btnPlay.TabIndex = 25;
+            this.btnPlay.Click += new System.EventHandler(this.Play);
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(16, 16);
+            this.guna2ImageButton2.Image = global::Client.Properties.Resources.BlackSound;
+            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton2.ImageRotate = 0F;
+            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(15, 15);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(316, 46);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(14, 14);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(20, 20);
+            this.guna2ImageButton2.TabIndex = 25;
+            // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(16, 16);
+            this.guna2ImageButton3.Image = global::Client.Properties.Resources.BlackStop;
+            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton3.ImageRotate = 0F;
+            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(15, 15);
+            this.guna2ImageButton3.Location = new System.Drawing.Point(294, 46);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(14, 14);
+            this.guna2ImageButton3.Size = new System.Drawing.Size(20, 20);
+            this.guna2ImageButton3.TabIndex = 25;
+            this.guna2ImageButton3.Click += new System.EventHandler(this.Stop);
             // 
             // Container
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
+            this.Controls.Add(this.guna2ImageButton3);
+            this.Controls.Add(this.guna2ImageButton2);
+            this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.vol);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.seekBar);
+            this.Controls.Add(this.lblvol);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblendTime);
             this.Controls.Add(this.lblduration);
@@ -506,6 +506,7 @@
             this.Controls.Add(this.btnEdit);
             this.Name = "Container";
             this.Size = new System.Drawing.Size(630, 263);
+            this.Load += new System.EventHandler(this.Loading);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -516,27 +517,28 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        public Guna.UI2.WinForms.Guna2CheckBox Sunday;
-        public Guna.UI2.WinForms.Guna2CheckBox Saturday;
-        public Guna.UI2.WinForms.Guna2CheckBox Friday;
-        public Guna.UI2.WinForms.Guna2CheckBox Thursday;
-        public Guna.UI2.WinForms.Guna2CheckBox Wednesday;
-        public Guna.UI2.WinForms.Guna2CheckBox Tuesday;
-        public Guna.UI2.WinForms.Guna2CheckBox Monday;
+        private Guna.UI2.WinForms.Guna2CheckBox CSunday;
+        private Guna.UI2.WinForms.Guna2CheckBox CSaturday;
+        private Guna.UI2.WinForms.Guna2CheckBox CFriday;
+        private  Guna.UI2.WinForms.Guna2CheckBox CThursday;
+        private Guna.UI2.WinForms.Guna2CheckBox CWednesday;
+        private Guna.UI2.WinForms.Guna2CheckBox CTuesday;
+        private Guna.UI2.WinForms.Guna2CheckBox CMonday;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Label lblheader;
         public System.Windows.Forms.Label lblstartTime;
         public System.Windows.Forms.Label lblendTime;
         private Guna.UI2.WinForms.Guna2ProgressBar seekBar;
-        private Guna.UI2.WinForms.Guna2Button btnPlay;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
         private System.Windows.Forms.Label lblcp;
         private Guna.UI2.WinForms.Guna2TrackBar vol;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblduration;
+        private System.Windows.Forms.Label lblvol;
+        private Guna.UI2.WinForms.Guna2ImageButton btnPlay;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
     }
 }

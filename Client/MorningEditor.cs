@@ -27,6 +27,13 @@ namespace Client
                     timeStart.Value = morningDatas.StartTime;
                     timeEnd.Value = morningDatas.EndTime;
                     txtname.Text = morningDatas.Name;
+                    Monday.Checked = morningDatas.Monday;
+                    Tuesday.Checked = morningDatas.Tuesday;
+                    Wednesday.Checked = morningDatas.Wednesday;
+                    Thursday.Checked = morningDatas.Thursday;
+                    Friday.Checked = morningDatas.Friday;
+                    Saturday.Checked = morningDatas.Saturday;
+                    Sunday.Checked = morningDatas.Sunday;
                     break;
                 }
             }

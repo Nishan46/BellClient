@@ -46,6 +46,18 @@ namespace Client
                 Thread addThread = new Thread(async () =>
                 {
                     Thread.Sleep(1000);
+                    Core.morningData.StartTime = timeStart.Value;
+                    Core.morningData.EndTime = timeEnd.Value;
+                    Core.morningData.Name = txtname.Text;
+                    Core.morningData.LastUpdated = DateTime.Now;
+                    Core.morningData.Id = $"{DateTime.Now.ToString("MMyyyy")} {DateTime.Now} {Core.Random.Next(100000, 999999)}";
+                    Core.morningData.Monday = Monday.Checked;
+                    Core.morningData.Tuesday = Tuesday.Checked;
+                    Core.morningData.Wednesday = Wednesday.Checked;
+                    Core.morningData.Thursday = Thursday.Checked;
+                    Core.morningData.Friday = Friday.Checked;
+                    Core.morningData.Saturday = Saturday.Checked;
+                    Core.morningData.Sunday = Sunday.Checked;
                     Core.MorningList.Add(Core.morningData);
                     using (StreamWriter sw = new StreamWriter($@"{Core.BaseDir}\Db\Morning.Db.json"))
                     {
@@ -85,19 +97,6 @@ namespace Client
                     btnAdd.Enabled = true;
                 }
             }
-
-            Core.morningData.StartTime = timeStart.Value;
-            Core.morningData.EndTime = timeEnd.Value;
-            Core.morningData.Name = txtname.Text;
-            Core.morningData.LastUpdated = DateTime.Now;
-            Core.morningData.Id = $"{DateTime.Now.ToString("MMyyyy")} {DateTime.Now} {Core.Random.Next(100000, 999999)}";
-            Core.morningData.Monday = Monday.Checked;
-            Core.morningData.Tuesday = Tuesday.Checked;
-            Core.morningData.Wednesday = Wednesday.Checked;
-            Core.morningData.Thursday = Thursday.Checked;
-            Core.morningData.Friday = Friday.Checked;
-            Core.morningData.Saturday = Saturday.Checked;
-            Core.morningData.Sunday = Sunday.Checked;
         }
     }
 }

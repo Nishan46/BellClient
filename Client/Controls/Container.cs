@@ -1,5 +1,6 @@
 ﻿using Bunifu.UI.WinForms;
 using Client.BellData;
+using Client.Properties;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,13 @@ namespace Client.Controls
     {
         public DateTime lastChecked;
         public string path;
+        public bool Monday;
+        public bool Tuesday;
+        public bool Wednesday;
+        public bool Thursday;
+        public bool Friday;
+        public bool Saturday;
+        public bool Sunday;
 
         WindowsMediaPlayer player = new WindowsMediaPlayer();
         public Container()
@@ -28,7 +36,9 @@ namespace Client.Controls
             ticker.Enabled = true;
             ticker.Interval = 1000;
             ticker.Tick += Ticking;
+
             
+
         }
 
         private void Ticking(object sender, EventArgs e)
@@ -55,10 +65,20 @@ namespace Client.Controls
             {
                 Core.can_edit = false;
                 btnEdit.Enabled = false;
+
+                btnPlay.Image = Resources.BlackPause;
+                btnPlay.ImageSize = new Size(15,15);
+                btnPlay.HoverState.ImageSize = new Size(16,16);
+                btnPlay.PressedState.ImageSize = new Size(14, 14);
             }
             else
             {
+                lblcp.Text = "00.00";
                 Core.can_edit = true;
+                btnPlay.Image = Resources.BlackPlay;
+                btnPlay.ImageSize = new Size(25, 25);
+                btnPlay.HoverState.ImageSize = new Size(26, 26);
+                btnPlay.PressedState.ImageSize = new Size(24, 24);
             }
             
         }
@@ -92,6 +112,7 @@ namespace Client.Controls
         private void vol_ValueChanged(object sender, EventArgs e)
         {
             player.settings.volume = vol.Value;
+            lblvol.Text = $"{vol.Value}%";
         }
 
         private void StopTrack(Guna2TrackBar bar , WindowsMediaPlayer players)
@@ -119,8 +140,39 @@ namespace Client.Controls
             }
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void NoChange(object sender, EventArgs e)
         {
+            Guna2CheckBox checkbox = (Guna2CheckBox)sender;
+
+            Dictionary<Guna2CheckBox, bool> bools = new Dictionary<Guna2CheckBox, bool>();
+            bools.Add(CMonday, Monday);
+            bools.Add(CTuesday, Tuesday);
+            bools.Add(CWednesday, Wednesday);
+            bools.Add(CThursday, Thursday);
+            bools.Add(CFriday, Friday);
+            bools.Add(CSaturday, Saturday);
+            bools.Add(CSunday, Sunday);
+            foreach (KeyValuePair<Guna2CheckBox,bool> items in bools)
+            {
+                if (checkbox.Name == items.Key.Name)
+                    checkbox.Checked = items.Value;
+            }
+        }
+
+        private void Loading(object sender, EventArgs e)
+        {
+            Dictionary<Guna2CheckBox, bool> bools = new Dictionary<Guna2CheckBox, bool>();
+            bools.Add(CMonday, Monday);
+            bools.Add(CTuesday, Tuesday);
+            bools.Add(CWednesday, Wednesday);
+            bools.Add(CThursday, Thursday);
+            bools.Add(CFriday, Friday);
+            bools.Add(CSaturday, Saturday);
+            bools.Add(CSunday, Sunday);
+            foreach (KeyValuePair<Guna2CheckBox, bool> items in bools)
+            {
+                items.Key.Checked = items.Value;
+            }
         }
     }
 }

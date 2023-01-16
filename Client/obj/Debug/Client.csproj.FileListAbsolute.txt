@@ -12,7 +12,6 @@ C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.DashBoard.resources
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.LogIn.resources
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.Morning_Panel.resources
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.Gear.resources
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.Controls.Container.resources
 C:\Users\Roshitha Sandaruwan\Documents\VS_Code_Repos\OnlineBellMRC\Client\Client\obj\Debug\Client.csproj.Fody.CopyLocal.cache
